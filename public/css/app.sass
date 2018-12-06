@@ -1,0 +1,3540 @@
+@import 'mixins/flex'
+@import 'mixins/mixins_varios'
+
+@media (min-width: 1600px)
+  .container
+    max-width: 1240px
+
+/* PRESETS */
+
+// Colores
+$royalBlue: #041F5F
+$royalBlueDark: #031A4F
+$lightRoyalBlue: #052777
+$prusianBlue: #00375E
+$goldenSand: #F3C967
+$metalicGold: #DDAB37
+$aliceBlue: #F4FBFF
+$bunker: #292C31
+$bunkerDark: #1B1D21
+// $bunkerDark: #222529
+$bunkerLight: #222529
+// $bunkerLight: #292C31
+$onyx: #32363c
+$antiFlashWhite: #F3F3F3
+$orangeYellow: #F9CB61
+
+.color-black
+  color: black
+.background-black
+  background: black
+
+.color-white
+  color: white
+.background-white
+  background: white
+
+.color-royalBlue
+  color: $royalBlue
+.background-royalBlue
+  background: $royalBlue
+
+.color-royalBlueDark
+  color: $royalBlueDark
+.background-royalBlueDark
+  background: $royalBlueDark
+
+.color-prusianBlue
+  color: $prusianBlue
+.background-prusianBlue
+  background: $prusianBlue
+
+.color-metalicGold
+  color: $metalicGold
+.background-metalicGold
+  background: $metalicGold
+
+.color-goldenSand
+  color: $goldenSand
+.background-goldenSand
+  background: $goldenSand
+
+.color-aliceBlue
+  color: $aliceBlue
+.background-aliceBlue
+  background: $aliceBlue
+
+.color-bunker
+  color: $bunker
+.background-bunker
+  background: $bunker
+
+.color-bunkerDark
+  color: $bunkerDark
+.background-bunkerDark
+  background: $bunkerDark
+
+.color-bunkerLight
+  color: $bunkerLight
+.background-bunkerLight
+  background: $bunkerLight
+
+.color-antiFlashWhite
+  color: $antiFlashWhite
+.background-antiFlashWhite
+  background: $antiFlashWhite
+
+.color-orangeYellow
+  color: $orangeYellow
+.background-orangeYellow
+  background: $orangeYellow
+
+.color-transparent
+  color: transparent
+.background-transparent
+  background: transparent
+
+// Typo
+h1, h2, h3, h4, h5, h6, p, blockquote, li, b, u, small, strong, pre
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+body, h1, h2, h3, h4, h5, h6
+  font-size-adjust: 0.5
+
+body
+  font-size: 100%
+  font-size: 1em
+  line-height: 1.37em
+  font-family: 'Lato', sans-serif
+  font-weight: 300
+  padding-top: 75px
+
+@media (min-width: 600px)
+  body
+    line-height: 1.4em
+    padding-top: 85px
+
+@media (min-width: 992px)
+  body
+    line-height: 1.45em
+    padding-top: 90px
+
+body.blog
+  font-family: 'Source Sans Pro', sans-serif
+
+p
+  margin-bottom: 1.3em
+
+h1, h2, h3, h4, h5, h6
+  margin-bottom: 0.5em
+  // font-weight: 700
+  // font-family: 'Playfair Display', serif
+  // letter-spacing: 0.01em
+
+h1
+  font-size: 2em
+  line-height: 1.25
+  margin-bottom: 0.8em
+
+@media (min-width: 600px)
+  h1
+    font-size: 2.5em
+    // line-height: 1.3
+    margin-bottom: 0.75em
+
+@media (min-width: 992px)
+  h1
+    font-size: 2.7em
+    line-height: 1.3
+
+@media (min-width: 992px)
+  h1
+    font-size: 2.85em
+    line-height: 1.3
+
+h2
+  font-size: 1.625em
+  line-height: 1.33
+  margin-bottom: 1em
+
+@media (min-width: 600px)
+  h2
+    font-size: 2em
+
+@media (min-width: 992px)
+  h2
+    font-size: 2.25em
+
+h3
+  font-size: 1.375em
+  line-height: 1.35
+  margin-bottom: 0.7em
+
+@media (min-width: 600px)
+  h3
+    font-size: 1.5em
+    margin-bottom: 0.8em
+    line-height: 1.37
+
+@media (min-width: 992px)
+  h3
+    font-size: 1.75em
+
+h4
+  font-size: 1.125em
+  line-height: 1.39
+  margin-bottom: 0.7em
+
+
+h5
+  margin-bottom: 0.7em
+  line-height: 1.375
+
+h6
+  margin-bottom: 0.7em
+  font-size: 0.9em
+  line-height: 1.35
+
+body
+  // font-family: 'Lato', sans-serif
+  font-weight: 300
+
+b, strong
+  font-weight: 700
+
+.w-700
+  font-weight: 700
+
+.w-400
+  font-weight: 400
+
+//Paddings
+.pd-tb-1
+  padding-top: 3em
+  padding-bottom: 3em
+
+@media (min-width: 600px)
+  .pd-tb-1
+    padding-top: 4em
+    padding-bottom: 4em
+
+.pd-tb-2
+  padding-top: 4em
+  padding-bottom: 4em
+
+@media (min-width: 600px)
+  .pd-tb-2
+    padding-top: 5em
+    padding-bottom: 5em
+
+.pd-tb-3
+  padding-top: 5em
+  padding-bottom: 5em
+
+.pd-tb-4
+  padding-top: 6em
+  padding-bottom: 6em
+
+@media (min-width: 600px)
+  .pd-tb-4
+    padding-top: 7.5em
+    padding-bottom: 7.5em
+
+.sp-b-1
+
+@media (min-width: 1400px)
+  .sp-b-1
+    padding-bottom: 4.5em
+
+// Títulos Especiales
+h6.subtitle
+  letter-spacing: 1.5px
+  margin-bottom: 0.8em
+  font-weight: 400
+  font-size: 0.7em
+  text-transform: uppercase
+
+@media (min-width: 600px)
+  h6.subtitle
+    font-size: 0.8em
+    margin-bottom: 0.8em
+    letter-spacing: 1.7px
+
+@media (min-width: 900px)
+  h6.subtitle
+    // font-size: 0.9em
+    margin-bottom: 0.85em
+    letter-spacing: 2.5px
+
+@media (min-width: 1200px)
+  h6.subtitle
+    font-size: 0.75em
+    margin-bottom: 0.85em
+    // letter-spacing: 1.7px
+
+// Backgrounds
+.background
+  background-size: cover
+  background-repeat: no-repeat
+  background-position: center
+  height: auto
+
+.back-slide1
+  background-image: url('../img/backs/back_1.jpg')
+
+.back-slide2
+  background-image: url('../img/backs/back_2.jpg')
+
+.back-slide3
+  background-image: url('../img/backs/back_3.jpg')
+  // background-position: bottom
+
+.back-cta-1
+  background-image: url('../img/backs/back_x.jpg')
+
+.back-servicios
+  background-image: url('../img/backs/back-servicios.jpg')
+
+@media (min-width: 1600px)
+  .back-servicios
+    padding: 50px 0
+    background-position: 0 -350px
+
+.back-nosotros
+  background-image: url('../img/backs/back-nosotros.jpg')
+
+@media (min-width: 900px)
+  .back-nosotros
+    background-position: bottom
+
+@media (min-width: 1400px)
+  .back-nosotros
+    background-position: center
+    padding: 50px 0
+
+.back-call-contacto
+  background-image: url('../img/backs/back-call-contacto.jpg')
+
+@media (min-width: 1200px)
+  .back-call-contacto
+    padding: 50px 0
+
+.back-callb-contacto
+  background-image: url('../img/backs/back-callb-contacto.jpg')
+
+// @media (min-width: 1200px)
+//   .back-callb-contacto
+//     padding: 50px 0
+
+.back-contacto
+  background-image: url('../img/backs/back-contacto.jpg')
+
+@media (min-width: 1200px)
+  .back-contacto
+    padding: 50px 0
+
+@media (min-width: 1400px)
+  .back-contacto
+    padding: 70px 0
+
+.back-s-tributaria
+  background-image: url('../img/backs/servicios-s-tributaria.jpg')
+
+.back-s-contable
+  background-image: url('../img/backs/servicios-s-contable.jpg')
+
+.back-s-laboral
+  background-image: url('../img/backs/servicios-s-laboral.jpg')
+
+.back-s-auditorias
+  background-image: url('../img/backs/servicios-s-auditorias.jpg')
+
+.back-s-internacional
+  background-image: url('../img/backs/servicios-s-internacional.jpg')
+
+.back-s-tecnologia
+  background-image: url('../img/backs/servicios-s-tecnologia.jpg')
+
+// .back-service-asesoria
+//   position: relative
+//   background-image: url('../img/dummy/1_s.jpg')
+//   background-size: cover
+//
+// .back-service-outsourcing
+//   position: relative
+//   background-image: url('../img/dummy/1_b.jpg')
+//   background-size: cover
+//
+// .back-service-auditorias
+//   position: relative
+//   background-image: url('../img/dummy/1_s.jpg')
+//   background-size
+//
+// .back-service-representacion
+//   position: relative
+//   background-image: url('../img/dummy/1_b.jpg')
+//   background-size: cover
+//
+// .back-service-tecnologia
+//   position: relative
+//   background-image: url('../img/dummy/1_s.jpg')
+//   background-size: cover
+//
+// .back-service-estrategia
+//   position: relative
+//   background-image: url('../img/dummy/1_b.jpg')
+//   background-size: cover
+
+
+.back-value1, .back-value2
+  position: relative
+  background: $royalBlue
+  &::after
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    background-size: cover
+    width: 100%
+    height: 100%
+    opacity: 0.1
+
+.back-value1
+  &::after
+    background-image: url('../img/dummy/1.jpg')
+
+.back-value2
+  &::after
+    background-image: url('../img/dummy/2.jpg')
+
+// Botones & Link
+a
+  color: $bunker
+  &:hover
+    color: $bunker
+    text-decoration: none
+
+.button
+  outline: none
+  border: none
+  padding: 9px 14px
+  @include border-radius(3px)
+  font-size: 10px
+  text-transform: uppercase
+  font-weight: 600
+  letter-spacing: 0.4px
+  line-height: auto
+  &:hover
+    text-decoration: none
+
+@media (min-width: 600px)
+  .button
+    font-size: 11px
+    padding: 11px 26px
+
+.button-normal
+  background: $goldenSand
+  color: $bunker
+  transition: all linear .3s
+  &:hover
+    background: $metalicGold
+
+.button-outline
+  background: transparent
+  color: $goldenSand
+  border: solid 1px $goldenSand
+  transition: all linear .3s
+  &:hover
+    color: $royalBlue
+    background: $goldenSand
+
+.button-outlineDark
+  background: transparent
+  color: $royalBlue
+  border: solid 1px $royalBlue
+  transition: all linear .3s
+  &:hover
+    color: white
+    background: $royalBlue
+
+// Hovers
+
+.h-opacity
+  opacity: 1
+  transition: all linear 0.3s
+  &:hover
+    opacity: 0.7
+
+// Links
+.link-white
+  color: white
+  opacity: 1
+  transition: all linear .3s
+  &:hover
+    color: white
+    opacity: 0.7
+    text-decoration: none
+
+/* ESTRUCTURA */
+
+// Header
+header.main-header-wrapper
+  z-index: 9999
+  width: 100%
+  position: fixed
+  top: 0
+  overflow: hidden
+  .main-header
+    @include flexbox
+    @include justify-content(space-between)
+    @include flex-wrap(wrap)
+    @include align-content(center)
+    height: 75px
+    // height: 200px
+    padding-left: 1.6em
+    padding-right: 1.6em
+    .header-brand
+      margin-bottom: 1px
+      @include align-self(center)
+      .logo
+        width: 120px
+    .menu-toggler
+      width: 23px
+      height: 15px
+      position: relative
+      -webkit-transform: rotate(0deg)
+      -moz-transform: rotate(0deg)
+      -o-transform: rotate(0deg)
+      transform: rotate(0deg)
+      -webkit-transition: .5s linear
+      -moz-transition: .5s linear
+      -o-transition: .5s linear
+      transition: .5s linear
+      cursor: pointer
+      @include align-self(center)
+      span
+        display: block
+        position: absolute
+        height: 2px
+        width: 100%
+        background: white
+        border-radius: 0.5px
+        opacity: 1
+        left: 0
+        -webkit-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+        -webkit-transition: .25s linear
+        -moz-transition: .25s linear
+        -o-transition: .25s linear
+        transition: .25s linear
+        &:nth-child(1)
+          top: 0px
+          -webkit-transform-origin: left center
+          -moz-transform-origin: left center
+          -o-transform-origin: left center
+          transform-origin: left center
+        &:nth-child(2)
+          top: 7px
+          -webkit-transform-origin: left center
+          -moz-transform-origin: left center
+          -o-transform-origin: left center
+          transform-origin: left center
+        &:nth-child(3)
+          top: 14px
+          -webkit-transform-origin: left center
+          -moz-transform-origin: left center
+          -o-transform-origin: left center
+          transform-origin: left center
+      &.open span
+        &:nth-child(1)
+          -webkit-transform: rotate(45deg)
+          -moz-transform: rotate(45deg)
+          -o-transform: rotate(45deg)
+          transform: rotate(45deg)
+          top: -2.3px
+          left: 3px
+        &:nth-child(2)
+          width: 0%
+          opacity: 0
+        &:nth-child(3)
+          -webkit-transform: rotate(-45deg)
+          -moz-transform: rotate(-45deg)
+          -o-transform: rotate(-45deg)
+          transform: rotate(-45deg)
+          top: 14px
+          left: 3px
+    .collapse-menu
+      width: 100%
+      height: 0
+      transition: all 1s
+      nav
+        ul
+          list-style: none
+          padding-left: 0
+          margin-bottom: 0
+          a
+            color: rgba(white, 0.9)
+      .main-menu
+        padding: 2em 0 1.5em
+        ul
+          li
+            margin-bottom: 0.25em
+            &:last-child
+              margin-bottom: 0
+            a
+              font-weight: 400
+              // text-transform: uppercase
+              // font-size: 0.8em
+          // .dropdown
+          //   .dropdown-content
+          //     display: none
+      .language-menu
+        padding-bottom: 1.5em
+        ul
+          li
+            display: inline-block
+            margin-bottom: 0.5em
+            margin-right: 0.3em
+            a
+              font-weight: 400
+              // text-transform: uppercase
+              // font-size: 0.8em
+      .social-button
+        padding-bottom: 1em
+        ul
+          a
+            margin-right: 0.8em
+            .rrss-icon
+              font-size: 1.2em
+    .dropdown-services
+      display: none
+
+@media (min-width: 600px)
+  header.main-header-wrapper
+    .main-header
+      height: 85px
+      padding-left: 2.2em
+      padding-right: 2.2em
+      .header-brand
+        margin-bottom: 0
+        .logo
+          width: 135px
+      .collapse-menu
+        nav
+          ul
+            a
+              // font-size: 1.05em
+        .main-menu
+          ul
+            li
+              // margin-bottom: 0.4em
+              a
+                // font-size: 0.85em
+        .language-menu
+          ul
+            li
+              a
+                // font-size: 0.85em
+
+@media (min-width: 992px)
+  header.main-header-wrapper
+    overflow: visible
+    .main-header
+      @include flex-wrap(nowrap)
+      @include justify-content(space-between)
+      margin: auto
+      height: 90px
+      padding-left: 2.5em
+      padding-right: 2.5em
+      .header-brand
+        .logo
+          width: 135px
+      .menu-toggler
+        display: none
+      .collapse-menu
+        @include flexbox
+        @include justify-content(space-between)
+        @include flex-wrap(nowrap)
+        // width: 80.5% -- (item "blog" agregado)
+        width: 78.3%
+        height: auto
+        nav
+          display: inherit
+          @include align-self(center)
+          ul
+            li, a
+              display: inline-block
+              // font-size: 0.9em
+              // letter-spacing: 0.3px
+        .main-menu
+          padding: 0
+          ul
+            li
+              margin-bottom: 0
+              margin: 0 9px
+              // a
+              //   font-size: 1em
+        .language-menu
+          padding-bottom: 0
+          ul
+            li
+              margin-bottom: auto
+        .social-button
+          padding-bottom: 0
+      .dropdown-services
+        position: absolute
+        background: $bunker
+        padding: 36px 0 12px
+        width: 100vw
+        left: 0
+        top: 90px
+        a
+          opacity: 1
+          transition: all linear 0.3s
+          margin: 0.3em 0
+          &:hover
+            opacity: 0.7
+        h3
+          font-size: 120%
+          margin-bottom: 34px
+          font-weight: 400
+          position: relative
+          left: 58px
+          color: white
+        [data-icon]:before
+          font-family: 'icomoon'
+          font-size: 37px
+          left: -58px
+          top: -4px
+          position: absolute
+          color: $goldenSand
+          content: attr(data-icon)
+          speak: none
+          font-weight: normal
+          font-variant: normal
+          text-transform: none
+          line-height: 1
+          -webkit-font-smoothing: antialiased
+
+@media (min-width: 1200px)
+  header.main-header-wrapper
+    .main-header
+      max-width: 1114px
+      padding-left: 0
+      padding-right: 0
+      // height: 90px
+      .header-brand
+        .logo
+          width: 137px
+      .collapse-menu
+        // width: 78.5% -- (item "blog" agregado)
+        nav
+          ul
+            a
+              margin-right: 6px
+              letter-spacing: 0.2px
+              font-size: 15px
+        width: 77.5%
+        // nav
+        //   ul
+        //     li, a
+        //       font-size: 15px
+        //       letter-spacing: 0.7px
+        .social-button
+          ul
+            a
+              margin-right: 0.8em
+      .dropdown-services
+        padding: 36px 0 10px
+        h3
+          font-size: 115%
+        [data-icon]:before
+          font-size: 35px
+
+@media (min-width: 1400px)
+  header.main-header-wrapper
+    .main-header
+      .header-brand
+        .logo
+          width: 142px
+      .collapse-menu
+        // width: 78% -- (item "blog" agregado)
+        width: 77%
+
+@media (min-width: 1600px)
+  header.main-header-wrapper
+    .main-header
+      max-width: 1215px
+
+.headroom
+  animation-duration: 1s
+  animation-fill-mode: both
+  will-change: transform
+  transition: transform 200ms linear
+
+.headroomBlog
+  animation-duration: 1s
+  animation-fill-mode: both
+  will-change: transform
+  transition: transform 0.3s linear
+
+.headroom--pinned
+  transform: translateY(0%)
+
+.headroom--unpinned
+  transform: translateY(-100%)
+
+.slideDown
+ transform: translateY(0%)
+
+.slideUp
+ transform: translateY(-100%)
+
+.slideDownBlog
+ transform: translateY(0%)
+
+.slideUpBlog
+ transform: translateY(-550%)
+
+// Present
+.slider-color
+  background: $royalBlue
+
+.slider
+  padding-top: 0 !important
+  width: 100%
+  height: 510px
+  overflow: hidden
+  position: relative
+  .slide
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    float: left
+    position: absolute
+    .present-wrapper
+      .present
+        .row
+          min-height: 520px
+          @include align-content(flex-end)
+          .present-headline
+            text-align: center
+            @include align-self(flex-end)
+            h1
+              font-weight: 700
+          .present-list
+            // display: none
+            text-align: center
+            // @include align-self(flex-end)
+            ul
+              list-style: none
+              padding-left: 15px
+              margin: auto
+              li.present-list-item
+                font-size: 0.95em
+                margin-bottom: 4px
+                padding-top: 6px
+                border-bottom: solid 1px rgba(white, 0.12)
+                padding-bottom: 10px
+                // &::before
+                //   font-family: 'icomoon'
+                //   margin-left: -20px
+                //   content: "\e902"
+                //   color: $goldenSand
+                &:last-child
+                  border-bottom: none
+                  padding-bottom: 0
+                a
+                  color: white
+                  font-weight: 300 !important
+                  &:hover
+                    color: white
+
+@media (min-width: 600px)
+  .slider
+    height: 67vh
+    .slide
+      .present-wrapper
+        .present
+          padding-top: 0
+          padding-bottom: 0.5em
+          .row
+            min-height: 67vh
+            .present-headline
+              @include align-self(flex-end)
+              max-width: 90%
+              margin-left: auto
+              margin-right: auto
+              margin-bottom: 3.8em
+              h1
+                font-size: 2.7em
+                margin-bottom: 0.7em
+            .present-list
+              @include align-self(flex-end)
+              position: relative
+              // bottom: -26px
+              ul
+                margin: auto
+                margin-bottom: 0
+                @include flexbox
+                @include justify-content(center)
+                li.present-list-item
+                  font-size: 1em
+                  width: 45%
+                  padding: 0 2em
+                  border-bottom: none
+                  border-right: solid 1px rgba(white, 0.12)
+                  &:last-child
+                    // padding-top: 8px
+                    position: relative
+                    border-right: none
+                  a
+                    letter-spacing: 0.015em
+
+@media (min-width: 992px)
+  .slider
+    height: 77.2vh
+    .slide
+      .present-wrapper
+        .present
+          padding-bottom: 1em
+          .row
+            min-height: 77.2vh
+            .present-headline
+              max-width: 85%
+              margin-bottom: 4.4em
+              h1
+                font-size: 2.85em
+                margin-bottom: 0.65em
+            .present-list
+              position: relative
+              // bottom: -16px
+              ul
+                margin-bottom: 0
+                margin-top: 0
+                // @include flex-wrap(wrap)
+                li.present-list-item
+                  font-size: 1.05em
+                  padding: 0 3em
+                  width: 40%
+                  a
+                    letter-spacing: 0.01em
+          .present-service
+            padding-bottom: 1.5em
+
+@media (min-width: 1200px)
+  .slider
+    height: 79vh
+    .slide
+      .present-wrapper
+        .present
+          .row
+            min-height: 79vh
+            .present-headline
+              max-width: 80%
+              margin-bottom: 4.6em
+              h1
+                font-size: 3em
+                // margin-bottom: 0.65em
+            .present-list
+              ul
+                li.present-list-item
+                  // font-size: 0.5em
+                  line-height: 1.5em
+                  width: 35%
+                  // font-size: 1.1em
+
+@media (min-width: 1400px)
+  .slider
+    height: 81vh
+    .slide
+      .present-wrapper
+        .present
+          // padding-top: 9.5em
+          .row
+            min-height: 81vh
+            .present-headline
+              margin-bottom: 5em
+              h1
+                font-size: 3.2em
+            .present-list
+              // padding-left: 4em
+              ul
+                li.present-list-item
+                  font-size: 1.1em
+
+@media (min-width: 1600px)
+  .slider
+    height: 84.5vh
+    .slide
+      .present-wrapper
+        .present
+          .row
+            min-height: 84.5vh
+            padding-bottom: 5em
+            .present-headline
+              // margin-bottom:
+              h1
+                font-size: 3.3em
+
+//Present Paginas
+.present-service
+  .row
+    min-height: 250px
+  .present-headline
+    @include align-self(center)
+  h1
+    text-align: center
+    position: relative
+    // font-size: 1.7em
+    // left: 52px
+    // max-width: 90%
+    margin-bottom: 0
+    font-weight: 600
+    font-size: 1.7em
+    display: block
+  [data-icon]:before
+    font-family: 'icomoon'
+    margin-bottom: 0.25em
+    display: block
+    font-size: 50px
+    color: $goldenSand
+    content: attr(data-icon)
+    speak: none
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+    -webkit-font-smoothing: antialiased
+  h3
+    display: none
+
+@media (min-width: 600px)
+  .present-service
+    padding-bottom: 0.7em
+    .row
+      min-height: 350px
+    // .present-headline
+    //   @include align-self(flex-end)
+    h1
+      // left: 70px
+      margin-bottom: 0.3em
+      font-size: 2.3em
+    [data-icon]:before
+      // left: -70px
+      font-size: 54px
+
+@media (min-width: 1200px)
+  .present-service
+    .row
+      min-height: 380px
+    .present-headline
+    h1
+      // left: 74px
+      margin-bottom: 0.5em
+      font-size: 2.5em
+    [data-icon]:before
+      // left: -74px
+
+@media (min-width: 992px)
+  .present-service
+    .row
+      // min-height: 380px
+    .present-headline
+    h1
+      margin-bottom: 0.5em
+      font-size: 2.5em
+    [data-icon]:before
+      font-size: 56px
+
+@media (min-width: 1400px)
+  .present-service
+    .row
+      min-height: 420px
+    h1
+      font-size: 2.9em
+      // left: 84px
+    [data-icon]:before
+      font-size: 60px
+      // left: -84px
+
+//Present Pages
+.present-page
+  min-height: 300px
+  @include align-self(flex-end)
+  .present-headline
+    @include align-self(flex-end)
+
+@media (min-width: 600px)
+  .present-page
+    min-height: 430px
+
+@media (min-width: 1400px)
+  .present-page
+    min-height: 450px
+
+// Indicadores Display
+.indicadores-wrapper
+  overflow: hidden
+  padding: 20px 0
+  width: 100%
+  display: block
+  white-space: nowrap
+  .indicadores
+    display: inline-block
+    padding-left: 100vw
+    -o-animation: scroll 13s infinite linear
+    -moz-animation: scroll 13s infinite linear
+    -webkit-animation: scroll 13s infinite linear
+    animation: scroll 13s infinite linear
+    .indicador
+      margin-right: 35px
+      display: inline-block
+      .indicador-name
+        font-weight: 300
+        display: inline-block
+        margin-bottom: 0
+        margin-right: 1px
+        font-size: 0.8em
+        position: relative
+        top: -2px
+      .indicador-ind
+        font-size: 1.05em
+        font-weight: 700
+        display: inline-block
+        margin-bottom: 0
+        color: $goldenSand
+    &:hover
+      -o-animation-play-state: paused
+      -moz-animation-play-state: paused
+      -webkit-animation-play-state: paused
+      animation-play-state: paused
+
+@media (min-width: 600px)
+  .indicadores-wrapper
+    padding: 20px 0
+    .indicadores
+      .indicador
+        margin-right: 60px
+        .indicador-name
+          font-size: 0.8em
+          position: relative
+          margin-right: 3px
+          top: -4px
+        .indicador-ind
+          font-size: 1.2em
+
+@media (min-width: 992px)
+  .indicadores-wrapper
+    padding: 20px 0
+    .indicadores
+      .indicador
+        margin-right: 80px
+        .indicador-name
+        .indicador-ind
+          font-size: 1.3em
+
+@media (min-width: 1200px)
+  .indicadores-wrapper
+    padding: 20px 0
+    .indicadores
+      -o-animation: scroll 20s infinite linear
+      -moz-animation: scroll 20s infinite linear
+      -webkit-animation: scroll 20s infinite linear
+      animation: scroll 20s infinite linear
+      .indicador
+        margin-right: 95px
+
+@media (min-width: 1600px)
+  .indicadores-wrapper
+    .indicadores
+      -o-animation: scroll 25s infinite linear
+      -moz-animation: scroll 25s infinite linear
+      -webkit-animation: scroll 25s infinite linear
+      animation: scroll 25s infinite linear
+      .indicador
+        margin-right: 100px
+
+
+@-webkit-keyframes scroll
+  0%
+    -o-transform: translate(0, 0)
+    -moz-transform: translate(0, 0)
+    -webkit-transform: translate(0, 0)
+    transform: translate(0, 0)
+  100%
+    -o-transform: translate(-100%, 0)
+    -moz-transform: translate(-100%, 0)
+    -webkit-transform: translate(-100%, 0)
+    transform: translate(-100%, 0)
+
+@-moz-keyframes scroll
+  0%
+    -o-transform: translate(0, 0)
+    -moz-transform: translate(0, 0)
+    -webkit-transform: translate(0, 0)
+    transform: translate(0, 0)
+  100%
+    -o-transform: translate(-100%, 0)
+    -moz-transform: translate(-100%, 0)
+    -webkit-transform: translate(-100%, 0)
+    transform: translate(-100%, 0)
+
+@-o-keyframes scroll
+  0%
+    -o-transform: translate(0, 0)
+    -moz-transform: translate(0, 0)
+    -webkit-transform: translate(0, 0)
+    transform: translate(0, 0)
+  100%
+    -o-transform: translate(-100%, 0)
+    -moz-transform: translate(-100%, 0)
+    -webkit-transform: translate(-100%, 0)
+    transform: translate(-100%, 0)
+
+@keyframes scroll
+  0%
+    -webkit-transform: translate(0, 0)
+    -webkit-transform: translate(0, 0)
+    -webkit-transform: translate(0, 0)
+    transform: translate(0, 0)
+  100%
+    -webkit-transform: translate(-100%, 0)
+    -webkit-transform: translate(-100%, 0)
+    -webkit-transform: translate(-100%, 0)
+    transform: translate(-100%, 0)
+
+// @media (min-width: 992px)
+//   .indicadores-wrapper
+//     .indicadores
+//       .indicador
+//         margin-right: 55px
+//         .indicador-name
+//           font-size: 0.8em
+//           position: relative
+//           margin-right: 3px
+//           top: -4px
+//         .indicador-ind
+//           font-size: 1.3em
+
+// Experience Display
+.experience-wrapper
+  .experience
+    padding: 2em 1.5em 2em
+  // background-image: url('../img/backs/back_x.jpg')
+  // background-position: center
+  // background-size: cover
+
+@media (min-width: 600px)
+  .experience-wrapper
+    height: auto
+    .experience
+      padding: 1.6em 1.8em 0.9em
+
+@media (min-width: 992px)
+  .experience-wrapper
+    .experience
+      padding: 1.8em 2.5em 1.2em
+
+@media (min-width: 1200px)
+  .experience-wrapper
+    .experience
+      padding: 2.5em 0 2em
+
+@media (min-width: 1400px)
+  .experience-wrapper
+    .experience
+      padding: 4.5em 0 4em
+
+// Servicios Display
+.services-display-wrapper
+  overflow: hidden
+  .services-display
+    h1
+      margin-bottom: 1em
+    .services-display-item-wrapper
+      margin: auto
+      .services-display-item
+        margin-bottom: 2.3em
+        .services-display-title
+          text-align: center
+          min-height: 50px
+          h3
+            display: block
+            // left: 55px
+            // position: relative
+            font-weight: 700
+            span
+              font-size: 65%
+              font-weight: 300
+              display: block
+              margin-bottom: -0.03em
+          [data-icon]:before
+            font-family: 'icomoon'
+            font-size: 45px
+            // left: -55px
+            display: block
+            // top: 3px
+            margin-bottom: 8px
+            // position: absolute
+            color: $goldenSand
+            content: attr(data-icon)
+            speak: none
+            font-weight: normal
+            font-variant: normal
+            text-transform: none
+            line-height: 1
+            -webkit-font-smoothing: antialiased
+        .services-display-description
+          margin-bottom: 25px
+          text-align: center
+        .button
+          margin: auto
+          width: 50%
+          display: block
+          text-align: center
+
+@media (min-width: 600px)
+  .services-display-wrapper
+    .services-display
+      padding-top: 0.5em
+      h1
+        margin-bottom: 1.1em
+      .services-display-item-wrapper
+        .services-display-item
+          margin-bottom: 3em
+          padding: 0 2em
+          .services-display-title
+            text-align: left
+            h3
+              // left: 60px
+              margin-bottom: 12px
+              span
+                margin-bottom: 0.07em
+            [data-icon]:before
+              // left: -60px
+              font-size: 48px
+              margin-bottom: 12px
+          .services-display-description
+            margin-bottom: 30px
+            text-align: left
+          .button
+            display: inline-block
+            width: auto
+
+@media (min-width: 992px)
+  .services-display-wrapper
+    .services-display
+      h1
+        margin-bottom: 1em
+      .services-display-item-wrapper
+        // margin-left: 2em
+        .services-display-item
+          padding: 0 2em
+          .services-display-title
+            min-height: 70px
+            h3
+              // left: 63px
+              margin-bottom: 16px
+              span
+                letter-spacing: 0.4px
+            [data-icon]:before
+              margin-bottom: 13px
+              font-size: 52px
+
+@media (min-width: 1200px)
+  .services-display-wrapper
+    .services-display
+      padding-top: 1em
+      .services-display-item-wrapper
+        .services-display-item
+          padding: 0 3em 0 2.5em
+          .services-display-title
+            [data-icon]:before
+              font-size: 50px
+
+@media (min-width: 1400px)
+  .services-display-wrapper
+    .services-display
+      padding-top: 1.5em
+      .services-display-item-wrapper
+        margin-left: 3.5em
+        .services-display-item
+          padding: 0 3.5em 0 2em
+          .services-display-title
+            // [data-icon]:before
+            //   font-size: 48px
+
+// Servicios Section
+// .subservices-wrapper
+//   .subservices
+//     .subservices-item
+//       h3
+//         min-height: 60px
+
+.subservices-wrapper
+  .subservices
+    margin-top: 3em
+    margin-bottom: 1.5em
+    .subservices-item-wrapper
+      padding: 0 15px 35px
+      width: 100%
+      // display: grid
+      .subservices-title
+        margin-bottom: 0.2em
+        h4
+          font-size: 75%
+      .subservices-item
+        margin-bottom: 1em
+        .item-header
+          h3
+            font-size: 16px
+            font-weight: 600
+            margin-bottom: 5px
+            position: relative
+            left: 16px
+          [data-icon]:before
+            font-family: 'icomoon'
+            font-size: 16px
+            position: absolute
+            left: -16px
+            top: 4px
+            margin-bottom: 8px
+            color: $royalBlue
+            content: attr(data-icon)
+            speak: none
+            font-weight: normal
+            font-variant: normal
+            text-transform: none
+            line-height: 1
+            -webkit-font-smoothing: antialiased
+        .item-desc
+      .button-act
+        // margin: auto
+        width: max-content
+        position: relative
+        margin-top: 8px
+        margin-bottom: 20px
+        span
+          font-size: 22px
+          vertical-align: middle
+          margin-right: 5px
+          margin-left: 0
+
+@media (min-width: 600px)
+  .subservices-wrapper
+    .subservices
+      margin-top: 3em
+      margin-bottom: 1.5em
+      .subservices-item-wrapper
+        padding: 12px 15px 40px 15px
+        .subservices-title
+          margin-bottom: 0.4em
+          width: 100% !important
+          h4
+            font-size: 80%
+        .subservices-item
+          margin-bottom: 0.9em
+          width: 48%
+          &:nth-child(2n+1)
+            padding-left: 3em
+          &:nth-child(2n+2)
+            padding-right: 2.5em
+          .item-header
+            h3
+              font-size: 19px
+              margin-bottom: 7px
+              left: 22px
+            [data-icon]:before
+              font-size: 18px
+              left: -22px
+          .item-desc
+            p
+              font-size: 16.3px
+              line-height: 22.5px
+        .button-act
+          // margin: auto
+          grid-column-start: 1
+          grid-column-end: 4
+          margin-top: 10px
+          margin-bottom: 34px
+
+@media (min-width: 992px)
+  .subservices-wrapper
+    .subservices
+      margin-top: 4em
+      margin-bottom: 2.8em
+      .subservices-item-wrapper
+        .subservices-item
+          margin-bottom: 1em
+          &:nth-child(2n+1)
+            // max-width: 410px
+          &:nth-child(2n+2)
+            // max-width: 410px
+          .item-desc
+            p
+              font-size: 16.5px
+              line-height: 23px
+        .button-act
+          margin-top: 10px
+          margin-bottom: 22px
+
+@media (min-width: 1200px)
+  .subservices-wrapper
+    .subservices
+      margin-top: 5em
+      margin-bottom: 3.5em
+      .subservices-item-wrapper
+        padding: 14px 15px 30px 15px
+        .subservices-title
+          margin-bottom: 0.6em
+        .subservices-item
+          &:nth-child(2n+1)
+            // max-width: 450px
+          &:nth-child(2n+2)
+            // max-width: 460px
+          .item-header
+            h3
+              font-size: 19px
+              margin-bottom: 8px
+              left: 28px
+            [data-icon]:before
+              font-size: 18px
+              left: -28px
+              // left: -14px
+          .item-desc
+            p
+              font-size: 16.8px
+              line-height: 24px
+
+@media (min-width: 1400px)
+  .subservices-wrapper
+    .subservices
+      // margin-top: 5em
+      // margin-bottom: 3.5em
+      .subservices-item-wrapper
+        padding: 20px 15px 30px 15px
+        .subservices-item
+          &:nth-child(2n+1)
+            padding-left: 4em
+          &:nth-child(2n+2)
+            padding-right: 3em
+          .item-header
+            h3
+              font-size: 18px
+              margin-bottom: 8px
+
+@media (min-width: 1600px)
+  .subservices-wrapper
+    .subservices
+      .subservices-item-wrapper
+        .subservices-item
+          &:nth-child(2n+1)
+            // max-width: 530px
+          &:nth-child(2n+2)
+            // max-width: 530px
+
+
+// Servicios Section -- servicios.html
+// .services-wrapper
+//   .services
+//     .service-item-wrapper
+//       padding: 55px 30px 70px
+//       .service-item
+//         h3
+//           display: inline-block
+//           // margin-bottom: 20px
+//           left: 35px
+//           position: relative
+//           font-weight: 400
+//         [data-icon]:before
+//           font-family: 'icomoon'
+//           // margin-right: 12px
+//           left: -35px
+//           top: 3px
+//           position: absolute
+//           color: $goldenSand
+//           content: attr(data-icon)
+//           speak: none
+//           font-weight: normal
+//           font-variant: normal
+//           text-transform: none
+//           line-height: 1
+//           -webkit-font-smoothing: antialiased
+//         .subservices
+//           margin-bottom: 27px
+//           ul
+//             list-style: none
+//             padding-left: 20px
+//             li
+//               // font-size: .95em
+//               opacity: 0.9
+//               margin-bottom: 8px
+//               &::before
+//                 font-family: 'icomoon'
+//                 margin-left: -20px
+//                 margin-right: 5px
+//                 content: "\e906"
+//                 color: $goldenSand
+//
+// @media (min-width: 600px)
+//   .services-wrapper
+//     .services
+//       .service-item-wrapper
+//         padding: 65px 40px 80px
+//         .service-item
+//           .subservices
+//             margin-bottom: 35px
+//
+// @media (min-width: 992px)
+//   .services-wrapper
+//     .services
+//       .service-item-wrapper
+//         padding: 70px 50px 95px
+//         .service-item
+//           h3
+//             left: 40px
+//           [data-icon]:before
+//             left: -40px
+//
+// @media (min-width: 1200px)
+//   .services-wrapper
+//     .services
+//       .service-item-wrapper
+//         padding: 70px 70px 95px
+//
+// @media (min-width: 1400px)
+//   .services-wrapper
+//     .services
+//       // .service-item-wrapper
+//       //   padding: 70px 70px
+
+// Servicios - single
+.subservices-wrapper
+  .subservices
+    .subservices-item
+
+// Blog Display
+.blog-display
+  .blog-display-item
+    .blog-display-img
+      background: $bunker
+      width: 100%
+      height: 180px
+      background-position: center
+      background-size: cover
+      margin-bottom: 10px
+    h4
+      margin: 20px 0
+      font-size: 1.2em
+
+@media (min-width: 600px)
+  .blog-display-wrapper
+    .blog-display
+      .blog-display-item
+        .blog-display-img
+          height: 150px
+          margin-bottom: 15px
+        h4
+          margin: 20px 0 24px
+
+@media (min-width: 992px)
+  .blog-display-wrapper
+    .blog-display
+      .blog-display-item
+        .blog-display-img
+          height: 170px
+        h4
+          margin: 25px 0 28px
+          font-size: 1.3em
+          line-height: 1.4em
+
+@media (min-width: 1200px)
+  .blog-display-wrapper
+    .blog-display
+      .blog-display-item
+        .blog-display-img
+          height: 190px
+
+// Valores Section
+.values-wrapper
+  .values
+    .value-item-wrapper
+      padding: 50px 30px
+
+@media (min-width: 600px)
+  .values-wrapper
+    .values
+      .value-item-wrapper
+        padding: 60px 40px
+
+@media (min-width: 992px)
+  .values-wrapper
+    .values
+      .value-item-wrapper
+        padding: 60px 50px
+
+@media (min-width: 1200px)
+  .values-wrapper
+    .values
+      .value-item-wrapper
+        padding: 60px 70px
+
+@media (min-width: 1400px)
+  .values-wrapper
+    .values
+      .value-item-wrapper
+        padding: 70px
+
+// Campos Display
+.campos-wrapper
+  .campos
+    .campo-header
+      padding-left: 1em
+      padding-right: 1em
+      margin-bottom: 50px
+    .campo-items
+      width: 95%
+      margin: auto
+      display: block
+      column-count: 2
+      .campo-item
+        display: inline-block
+        margin-bottom: 15px
+        padding-left: 3vw
+        .icon-campo
+          font-size: 1.2em
+          margin-right: 15px
+        h4, h5
+          display: inline-block
+
+@media (min-width: 600px)
+  .campos-wrapper
+    .campos
+      .campo-header
+        margin-bottom: 65px
+      .campo-items
+        column-count: 3
+        width: 100%
+        .campo-item
+          padding-left: 7vw
+          margin-bottom: 20px
+          h5
+            font-size: 1.05em
+
+@media (min-width: 992px)
+  .campos-wrapper
+    .campos
+      padding: 20px 0 15px
+      .campo-header
+        margin-bottom: 85px
+      .campo-items
+        column-count: 4
+        width: 89%
+        .campo-item
+          padding-left: 3.5vw
+          margin-bottom: 25px
+          .icon-campo
+            font-size: 1.35em
+            margin-right: 18px
+
+@media (min-width: 1200px)
+  .campos-wrapper
+    .campos
+      padding: 20px 0
+      .campo-items
+        width: 100%
+        max-width: 1030px
+        .campo-item
+          .icon-campo
+            font-size: 1.5em
+            margin-right: 20px
+
+@media (min-width: 1400px)
+  .campos-wrapper
+    .campos
+      .campo-items
+        column-count: 4
+        max-width: 1060px
+        .campo-item
+          width: 100%
+          // padding-left: 3vw
+          h5
+            font-size: 1.1em
+
+@media (min-width: 1600px)
+  .campos-wrapper
+    .campos
+      .campo-items
+        max-width: 1180px
+        .campo-item
+          // padding-left: 3vw
+
+// Recomendaciones Display
+.recomendaciones-wrapper
+  .recomendaciones
+    .recomendacion
+      p
+        font-size: 1.05em
+        line-height: 1.45em
+      .recomendacion-info
+        img
+          max-width: 100%
+        p
+          margin-top: 3px
+
+@media (min-width: 600px)
+  .recomendaciones-wrapper
+    .recomendaciones
+      padding: 20px 0 25px
+      .recomendacion
+        padding-left: 35px !important
+        padding-right: 35px !important
+        .recomendacion-info
+          margin-top: 30px
+
+@media (min-width: 992px)
+  .recomendaciones-wrapper
+    .recomendaciones
+      padding: 25px 0 35px
+      .recomendacion
+        p
+          font-size: 1.1em
+          line-height: 1.55em
+
+@media (min-width: 1200px)
+  .recomendaciones-wrapper
+    .recomendaciones
+      padding: 35px 0 45px
+      width: 90%
+
+@media (min-width: 1400px)
+  .recomendaciones-wrapper
+    .recomendaciones
+      .recomendacion
+        .recomendacion-info
+          p
+            margin-top: 4px
+
+// Partners
+.partners-wrapper
+  .partners
+    .partner-img
+      width: 100%
+      max-width: 115px
+      margin-top: 52px
+
+@media (min-width: 600px)
+  .partners-wrapper
+    .partners
+      padding: 10px 0 5px
+      .partner-img
+        margin-top: 75px
+
+@media (min-width: 992px)
+  .partners-wrapper
+    .partners
+      padding: 20px 0 5px
+      .partners-header
+        // padding: 0 4em
+        h1
+          margin: auto
+          margin-bottom: 40px
+          width: 70%
+      .partners-items
+        width: 100%
+        .partner-img
+          margin-top: 85px
+          max-width: 135px
+
+@media (min-width: 1200px)
+  .partners-wrapper
+    .partners
+      padding: 30px 0 5px
+      .partners-header
+        h1
+          margin-bottom: 38px
+      .partners-items
+        width: 90%
+        .partner-img
+          margin-top: 95px
+          max-width: 155px
+
+@media (min-width: 1400px)
+  .partners-wrapper
+    .partners
+      padding: 30px 0 25px
+      .partners-items
+        width: 100%
+
+// Formulario de Contacto
+.contactForm-wrapper
+  .contactForm
+    h1
+      margin-bottom: 40px
+    .contactForm-header
+      .contactForm-header-schedule
+        margin-top: 12px
+        margin-bottom: 2px
+    .contactForm-form
+      margin-top: 20px
+      .form-label
+        display: none
+      input
+        margin-bottom: 25px
+        @include border-radius(0)
+        border: none
+        border-bottom: solid 1px rgba(white, 0.5)
+        padding-left: 2px
+        padding-bottom: 10px
+        outline: none !important
+        outline-width: 0
+        transition: all linear 0.3s
+        color: rgba(gray, 0.8)
+        &:focus
+          outline: $bunker
+          background: transparent
+          border-bottom: solid 1px $goldenSand
+          box-shadow: none
+          -moz-box-shadow: none
+          -webkit-box-shadow: none
+      select
+        margin-bottom: 25px
+        @include border-radius(0)
+        border: none
+        border-bottom: solid 1px rgba(white, 0.5)
+        padding-left: 0px
+        padding-bottom: 10px
+        margin-top: 28px
+        font-size: 1em
+        color: rgba(gray, 0.8)
+        transition: all linear 0.3s
+        &:focus
+          outline: $bunker
+          background: transparent
+          border-bottom: solid 1px $goldenSand
+          box-shadow: none
+          -moz-box-shadow: none
+          -webkit-box-shadow: none
+        option
+          background: transparent
+      textarea
+        color: rgba(gray, 0.8)
+        @include border-radius(0)
+        border: none
+        border-bottom: solid 1px rgba(white, 0.5)
+        padding-left: 2px
+        padding-bottom: 5px
+        transition: all linear 0.3s
+        &:focus
+          outline: $bunker
+          background: transparent
+          border-bottom: solid 1px $goldenSand
+          box-shadow: none
+          -moz-box-shadow: none
+          -webkit-box-shadow: none
+      .button-send
+        padding: 9px 14px
+
+@media screen and (min-width: 600px)
+  .contactForm-wrapper
+    .contactForm
+      h1
+        margin-bottom: 42px
+      .contactForm-header
+        .contactForm-header-desc, .contactForm-header-schedule
+          margin: 15px 0 15px
+        .contactForm-header-desc
+          padding-right: 60px
+      .contactForm-form
+        margin-top: 20px
+        .button-send
+          padding: 9px 24px
+
+@media (min-width: 992px)
+  .contactForm-wrapper
+    .contactForm
+      margin: auto
+      max-width: 95%
+      h1
+        margin-bottom: 58px
+      .contactForm-header
+        .contactForm-header-desc, .contactForm-header-schedule
+          margin: 18px 0 35px
+        .contactForm-header-desc
+          margin: 20px 0 9px
+          padding-right: 80px
+      .contactForm-form
+        margin-top: 5px
+
+@media (min-width: 1200px)
+  .contactForm-wrapper
+    .contactForm
+      padding-top: 10px
+      max-width: 88%
+      h1
+        margin-bottom: 54px
+      .contactForm-header
+        .contactForm-header-desc, .contactForm-header-schedule
+          // margin: 0
+          // margin: 18px 0 35px
+        .contactForm-header-desc
+          margin: 20px 0 9px
+      .contactForm-form
+        margin-top: 5px
+
+@media (min-width: 1400px)
+  .contactForm-wrapper
+    .contactForm
+      max-width: 1100px
+      padding-bottom: 10px
+      h1
+        margin-bottom: 54px
+      .contactForm-header
+        .contactForm-header-desc, .contactForm-header-schedule
+          // margin: 0
+          margin: 18px 0 30px
+        .contactForm-header-desc
+          margin: 20px 0 9px
+      .contactForm-form
+        margin-top: 5px
+
+@media (min-width: 1600px)
+  .contactForm-wrapper
+    .contactForm
+      h1
+        margin-bottom: 60px
+
+// Mapa
+#map
+  width: 100%
+  height: 400px
+  background: $royalBlue
+
+@media (min-width: 600px)
+  #map
+    height: 440px
+
+@media (min-width: 992px)
+  #map
+    height: 460px
+
+@media (min-width: 1200px)
+  #map
+    height: 480px
+
+@media (min-width: 1600px)
+  #map
+    height: 550px
+
+// Footer
+footer.main-footer
+  padding: 3em 0.9em
+  width: 100%
+  .footer-brand
+    padding-bottom: 2.5em
+    .footer-logo
+      width: 125px
+    .footer-mono
+      width: 45px
+  .footer-main
+    .footer-main-dptos
+      a
+        display: block
+        margin-bottom: 0.8em
+    .footer-main-links
+      nav.links
+        a
+          display: block
+          margin-bottom: 0.3em
+    .footer-main-contact
+      .contact-info
+        width: 100%
+        p
+          line-height: 1.45em
+      .footer-rrss-wrapper
+        margin-top: 2em
+        .footer-rrss
+          list-style: none
+          padding-left: 0
+          .rrss-item
+            display: inline-block
+            .rrss-icon
+              color: white
+              font-size: 20px
+              margin-right: 15px
+
+@media (min-width: 600px)
+  footer.main-footer
+    padding: 3.5em 0 4em
+    .footer-brand
+      padding-bottom: 3em
+      .footer-logo
+        width: 130px
+    .footer-main
+      .footer-main-dptos
+      .footer-main-links
+        nav.links
+          a
+            margin-bottom: 0.6em
+      .footer-main-contact
+        .contact-info
+          p
+            line-height: 1.5em
+        .footer-rrss-wrapper
+          margin-top: 3em
+
+@media (min-width: 992px)
+  footer.main-footer
+    padding: 4em 0 4.5em
+    .footer-brand
+      padding-bottom: 3em
+      .footer-logo
+        width: 140px
+    .footer-main
+      .footer-main-dptos
+      .footer-main-links
+        nav.links
+          a
+            margin-bottom: 0.3em
+      .footer-main-contact
+
+@media (min-width: 1200px)
+  footer.main-footer
+    padding: 4.2em 0 4.6em
+    .footer-brand
+      padding-bottom: 3.6em
+    .footer-main
+      .footer-main-dptos
+      .footer-main-links
+        padding-left: 3em
+      .footer-main-contact
+        padding-left: 3.5em
+
+@media (min-width: 1400px)
+  footer.main-footer
+    padding: 4.5em 0 5em
+    .footer-brand
+      padding-bottom: 4em
+      .footer-logo
+        width: 150px
+    .footer-main
+      .footer-main-dptos
+      .footer-main-links
+        padding-left: 3.7em
+      .footer-main-contact
+        padding-left: 4.2em
+
+.footer-credits
+  p
+    margin: 0
+    opacity: 0.6
+    font-size: 80%
+    letter-spacing: 0.5px
+
+@media (min-width: 992px)
+  .footer-credits
+    p
+      font-size: 85%
+
+.space
+  width: auto
+  margin: 0
+
+.subtitle-small
+  color: $lightRoyalBlue
+  font-weight: 400
+  font-size: 80%
+  opacity: 0.7
+  letter-spacing: 1.2px
+  margin-bottom: 1.5em
+  text-transform: uppercase
+
+.subtitle-goldenSand
+  color: $goldenSand
+
+//
+.dummy-box
+  background: $orangeYellow
+//
+//
+
+/* B L O G   S T Y L E S */
+body.blog
+  font-family: 'Source Sans Pro', sans-serif
+  padding-top: 68px
+
+@media (min-width: 600px)
+  body.blog
+    padding-top: 85px
+
+/* Header */
+.blog-header-wrapper
+  margin: 0
+  z-index: 9999
+  width: 100%
+  position: fixed
+  top: 0
+  margin: 0
+  .blog-header
+    @include flexbox
+    @include justify-content(space-between)
+    @include flex-wrap(wrap)
+    @include align-content(center)
+    padding-left: 1.6em
+    padding-right: 1.6em
+    height: 68px
+    margin: 0
+    .menu-toggler-blog
+      margin-top: -2px
+      width: 23px
+      height: 15px
+      position: relative
+      -webkit-transform: rotate(0deg)
+      -moz-transform: rotate(0deg)
+      -o-transform: rotate(0deg)
+      transform: rotate(0deg)
+      -webkit-transition: .5s linear
+      -moz-transition: .5s linear
+      -o-transition: .5s linear
+      transition: .5s linear
+      cursor: pointer
+      @include align-self(center)
+      span
+        display: block
+        position: absolute
+        height: 2px
+        width: 100%
+        background: white
+        border-radius: 0.5px
+        opacity: 1
+        left: 0
+        -webkit-transform: rotate(0deg)
+        -moz-transform: rotate(0deg)
+        -o-transform: rotate(0deg)
+        transform: rotate(0deg)
+        -webkit-transition: .25s linear
+        -moz-transition: .25s linear
+        -o-transition: .25s linear
+        transition: .25s linear
+        &:nth-child(1)
+          top: 0px
+          -webkit-transform-origin: left center
+          -moz-transform-origin: left center
+          -o-transform-origin: left center
+          transform-origin: left center
+        &:nth-child(2)
+          top: 7px
+          -webkit-transform-origin: left center
+          -moz-transform-origin: left center
+          -o-transform-origin: left center
+          transform-origin: left center
+        &:nth-child(3)
+          top: 14px
+          -webkit-transform-origin: left center
+          -moz-transform-origin: left center
+          -o-transform-origin: left center
+          transform-origin: left center
+      &.open span
+        &:nth-child(1)
+          -webkit-transform: rotate(45deg)
+          -moz-transform: rotate(45deg)
+          -o-transform: rotate(45deg)
+          transform: rotate(45deg)
+          top: -2.3px
+          left: 3px
+        &:nth-child(2)
+          width: 0%
+          opacity: 0
+        &:nth-child(3)
+          -webkit-transform: rotate(-45deg)
+          -moz-transform: rotate(-45deg)
+          -o-transform: rotate(-45deg)
+          transform: rotate(-45deg)
+          top: 14px
+          left: 3px
+    .header-brand-blog
+      @include align-self(center)
+      position: absolute
+      left: 0
+      right: 0
+      max-width: 150px
+      margin: auto
+      text-align: center
+      .logo
+        width: 80px
+    .search-toggler
+      @include align-self(center)
+      cursor: pointer
+      span
+        color: white
+        font-size: 1.3em
+        display: block
+        // vertical-align: middle
+    .blog-menu-dropdown
+      position: absolute
+      // position: relative
+      // display: block
+      display: none
+      width: 100%
+      left: 0
+      right: 0
+      top: 68px
+      padding-top: 1.6em
+      padding-bottom: 1.6em
+      padding-left: 0.6em
+      padding-right: 0.6em
+      background: $onyx
+      overflow: hidden
+      // z-index: -1
+      .blog-menu-list
+        width: 100%
+        hr
+          height: 0
+          position: relative
+          width: 20%
+          margin: 20px 0
+          border: none
+          border-top: 0.5px solid rgba(white, 0.2)
+        a
+          display: table
+          text-transform: uppercase
+          font-size: 12.5px
+          margin-bottom: 10px
+          letter-spacing: 1.8px
+          font-weight: 600
+          border-bottom: solid 1px transparent
+          transition: all ease-in-out 0.25s
+          &:hover, &:focus
+            color: $metalicGold
+            border-bottom: solid 1px $metalicGold
+      .blog-menu-featured
+    .blog-search-dropdown
+      position: absolute
+      width: 100%
+      left: 0
+      right: 0
+      top: 68px
+      overflow: hidden
+      padding-top: 1.6em
+      padding-bottom: 1.6em
+      padding-left: 1.6em
+      padding-right: 1.6em
+      display: none
+      background: $onyx
+      .searchForm
+        margin: 0
+        width: 100%
+        display: flex
+        .searchInput
+          width: 100%
+          border: none
+          outline: none
+          color: rgba(white, 0.6)
+          margin: 0
+          position: relative
+        .searchSubmit
+          width: auto
+          border: none
+          outline: none
+          margin-left: 10px
+          padding: 0
+          color: rgba(white, 0.6)
+          cursor: pointer
+          transition: all ease-in-out 0.3s
+          &::before
+            content: "\e916"
+            font-family: 'icomoon'
+            font-size: 20px
+          &:hover
+            color: rgba(white, 0.8)
+
+@media (min-width: 600px)
+  .blog-header-wrapper
+    .blog-header
+      height: 85px
+      padding-left: 2.2em
+      padding-right: 2.2em
+      .menu-toggler-blog
+      .header-brand-blog
+        .logo
+          width: 90px
+      .search-toggler
+      .blog-menu-dropdown
+        top: 85px
+        padding-left: 0
+        padding-right: 0
+      .blog-search-dropdown
+        top: 85px
+        padding-left: 1.9em
+        padding-right: 1.9em
+
+@media (min-width: 992px)
+  .blog-header-wrapper
+    .blog-header
+      padding-left: 2.5em
+      padding-right: 2.5em
+      .menu-toggler-blog
+      .header-brand-blog
+        .logo
+          width: 95px
+      .header-toggler
+      .blog-menu-dropdown
+      .blog-search-dropdown
+        padding-left: 2em
+        padding-right: 2em
+
+
+@media (min-width: 1200px)
+  .blog-header-wrapper
+    .blog-header
+      max-width: 1114px
+      margin: auto
+      padding-left: 0
+      padding-right: 0
+      .blog-menu-dropdown
+        .blog-menu-list
+          a
+            font-size: 12.5px
+            margin-bottom: 12px
+            letter-spacing: 2.2px
+            // font-weight: 600
+      .blog-search-dropdown
+        padding-left: 0
+        padding-right: 0
+        margin: auto
+        // max-width: 1114px
+        .searchForm
+          margin: auto
+          max-width: 1114px
+
+@media (min-width: 1400px)
+  .blog-header-wrapper
+    .blog-header
+
+@media (min-width: 1600px)
+  .blog-header-wrapper
+    .blog-header
+      max-width: 1215px
+      .blog-search-dropdown
+        .searchForm
+          max-width: 1215px
+
+// Featured
+.blogFeatured
+  background: black
+  position: relative
+  display: grid
+  .linkHightlight
+    overflow: hidden
+    &:hover, &:focus
+      .featuredItemImage
+        transform: scale(1.15)
+        // opacity: 0.5
+  .featuredItemImage
+    margin: 0
+    padding: 0
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    height: 300px
+    opacity: 0.55
+    transition: all ease-out 7s
+    // overflow: hidden
+  .featuredItem
+    padding-left: 1.6em
+    padding-right: 2em
+    position: absolute
+    top: 0
+    bottom: 0
+    margin: auto
+    overflow: auto
+    height: 100%
+    display: grid
+    align-items: center
+    .itemContent
+      h1
+        color: white
+        font-weight: 700
+        margin-bottom: 0
+        font-size: 28px
+      p
+        color: white
+
+@media (min-width: 600px)
+  .blogFeatured
+    .featuredItemImage
+      height: 400px
+    .featuredItem
+      width: 80%
+      padding-left: 2.2em
+      padding-right: 3em
+      .itemContent
+        h1
+          font-size: 38px
+
+@media (min-width: 992px)
+  .blogFeatured
+    .featuredItemImage
+    .featuredItem
+      padding-left: 2.6em
+      padding-right: 4em
+      width: 70%
+      .itemContent
+        h1
+          font-size: 40px
+
+@media (min-width: 1200px)
+  .blogFeatured
+    .featuredItemImage
+      height: 440px
+    .featuredItem
+      margin: auto
+      width: 100%
+      padding-left: 0
+      padding-right: 0
+      .itemContent
+        max-width: 1114px
+        width: 100%
+        margin: auto
+        h1
+          width: 70%
+          font-size: 44px
+
+@media (min-width: 1600px)
+  .blogFeatured
+    .featuredItemImage
+      height: 480px
+    .featuredItem
+      .itemContent
+        max-width: 1215px
+        width: 100%
+        margin: auto
+        h1
+          width: 70%
+          font-size: 46px
+
+// Category Styles
+.blogPostCategory
+  color: $metalicGold
+  text-transform: uppercase
+  font-weight: 400
+  font-size: 13px
+  letter-spacing: 2px
+  display: block
+  margin-bottom: 4px
+
+// latest Highlight
+.highlight-wrapper
+  .highlight
+    padding-top: 18px
+    padding-bottom: 18px
+    padding-left: 18px
+    padding-right: 18px
+    .highlightItem
+      position: relative
+      background: black
+      margin-bottom: 12px
+      height: 230px
+      display: grid
+      overflow: hidden
+      &:hover, &:focus
+        .itemImage
+          transform: scale(1.15)
+          // opacity: 0.5
+      .itemImage
+        // position: absolute
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        height: 100%
+        opacity: 0.55
+        transition: all ease-out 4s
+      .item
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto
+        overflow: auto
+        height: 100%
+        display: grid
+        align-content: center
+        padding: 17px 23px
+        h2
+          color: white
+          font-weight: 600
+          font-size: 22px
+          margin: 0
+          width: 90%
+        .blogPostCategory
+          font-size: 11px
+
+@media (min-width: 600px)
+  .highlight-wrapper
+    .highlight
+      padding-top: 28px
+      // padding-bottom: 18px
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      padding-left: 0
+      padding-right: 0
+      .highlightItem
+        width: 100%
+        height: 290px
+        margin-bottom: 20px
+        &:nth-child(1n)
+          width: 57%
+        &:nth-child(2n)
+          width: 40%
+        &:nth-child(3n)
+          width: 40%
+        &:nth-child(4n)
+          width: 57%
+        .item
+          padding: 17px 26px
+          h2
+            font-size: 24px
+
+@media (min-width: 992px)
+  .highlight-wrapper
+    .highlight
+      .highlightItem
+        // width: 100%
+        height: 340px
+        margin-bottom: 23px
+        .item
+          padding: 17px 30px
+          h2
+            font-size: 27px
+
+@media (min-width: 1200px)
+  .highlight-wrapper
+    .highlight
+      .highlightItem
+        // width: 100%
+        height: 350px
+        margin-bottom: 23px
+        &:nth-child(1n)
+          width: 57.7%
+        &:nth-child(2n)
+          width: 40%
+        &:nth-child(3n)
+          width: 40%
+        &:nth-child(4n)
+          width: 57.7%
+        .item
+          padding: 17px 38px
+          h2
+            font-size: 30px
+            width: 80%
+
+.suscribeCTA-wrapper
+  margin: auto
+  position: relative
+  height: 100%
+  overflow: hidden
+  background: black
+  .suscribeCTAImage
+    position: absolute
+    width: 100%
+    height: 100%
+    z-index: 2
+    opacity: 0.17
+    background-position: center
+    background-size: cover
+    background-repeat: no-repeat
+    // background-attachment: fixed
+  .suscribeCTA
+    width: 100%
+    position: relative
+    z-index: 10
+    padding-left: 20px
+    padding-right: 20px
+    text-align: center
+    padding-top: 3.5em
+    padding-bottom: 3.5em
+    .blogPostCategory
+      font-size: 10px
+      margin-bottom: 10px
+    h1
+      margin-bottom: 22px
+      font-weight: 700
+      font-size: 24px
+    form
+      margin: 0
+      .form-group
+        margin: 0
+        input
+          background: transparent
+          outline: none
+          border: none
+          text-align: center
+          margin: auto
+          width: 250px
+          border-bottom: solid 1px rgba(white, 0.2)
+          margin-bottom: 14px
+          color: white
+          &::-webkit-input-placeholder
+            color: rgba(white, 0.5)
+          &::-moz-placeholder
+            color: rgba(white, 0.5)
+          &:-ms-input-placeholder
+            color: rgba(white, 0.5)
+          &:-moz-placeholder
+            color: rgba(white, 0.5)
+        button
+          background: $orangeYellow
+          outline: none
+          border: none
+          color: $bunker
+          text-transform: uppercase
+          font-size: 12px
+          font-weight: 600
+          letter-spacing: 0.5px
+          padding: 5px 10px
+          border-radius: 3px
+          &:hover, &:visited, &:focus
+            outline: none
+            background: $metalicGold
+            color: $bunker
+            border: none
+
+@media (min-width: 600px)
+  .suscribeCTA-wrapper
+    .suscribeCTAImage
+    .suscribeCTA
+      padding-top: 4em
+      padding-bottom: 4em
+      .blogPostCategory
+        font-size: 12px
+      h1
+        font-size: 32px
+      form
+        .form-group
+          input
+            padding: 6px 4px
+          button
+            font-size: 13px
+
+@media (min-width: 992px)
+  .suscribeCTA-wrapper
+    .suscribeCTAImage
+    .suscribeCTA
+      padding-top: 4.6em
+      padding-bottom: 4.6em
+      .blogPostCategory
+        font-size: 12px
+      h1
+        font-size: 36px
+      form
+        .form-group
+          input
+            padding: 8px 4px
+            width: 280px
+            margin-bottom: 16px
+            font-size: 16px
+          button
+            font-size: 13px
+
+@media (min-width: 1200px)
+  .suscribeCTA-wrapper
+    .suscribeCTAImage
+    .suscribeCTA
+      padding-top: 5.5em
+      padding-bottom: 5.5em
+      .blogPostCategory
+        font-size: 12px
+      h1
+        font-size: 40px
+        margin-bottom: 24px
+      form
+        .form-group
+          input
+            padding: 8px 4px
+            width: 280px
+            margin-bottom: 18px
+            font-size: 18px
+          button
+            font-size: 13px
+
+@media (min-width: 1400px)
+  .suscribeCTA-wrapper
+    .suscribeCTAImage
+    .suscribeCTA
+      padding-top: 6em
+      padding-bottom: 6em
+      .blogPostCategory
+        font-size: 12px
+      h1
+        font-size: 40px
+        margin-bottom: 24px
+      form
+        .form-group
+          input
+            padding: 8px 4px
+            width: 280px
+            margin-bottom: 18px
+            font-size: 18px
+          button
+            font-size: 13px
+
+@media (min-width: 1600px)
+  .suscribeCTA-wrapper
+    .suscribeCTAImage
+    .suscribeCTA
+      padding-top: 6.5em
+      padding-bottom: 6.5em
+
+.postList-wrapper
+  .postList
+    // padding-top: 26px
+    // padding-bottom: 26px
+    padding-left: 18px
+    padding-right: 18px
+    .postListItem
+      margin-bottom: 20px
+      .itemImg-wrapper
+        width: 100%
+        height: 210px
+        // display: block
+        display: none
+        margin-bottom: 16px
+        overflow: hidden
+        background: black
+        position: relative
+        &:hover, &:focus
+          .itemImg
+            transform: scale(1.15)
+        .itemImg
+          background-position: center
+          background-size: cover
+          background-repeat: no-repeat
+          height: 100%
+          opacity: 0.55
+          transition: all ease-out 4s
+      .itemData-wrapper
+        .itemData
+          .blogPostCategory
+            color: $goldenSand
+            font-size: 11px
+            margin-bottom: 5px
+          h3
+            font-weight: 700
+            font-size: 21px
+            line-height: 27px
+            margin-bottom: 12px
+          p
+            font-size: 14px
+            font-weight: 400
+            line-height: 20px
+    .highlightItem
+      position: relative
+      background: black
+      margin-bottom: 30px
+      height: 270px
+      display: grid
+      overflow: hidden
+      margin-left: -17px
+      margin-right: -17px
+      border-bottom: solid 1px rgba($bunkerLight, 0.05)
+      &:hover, &:focus
+        .itemImage
+          transform: scale(1.15)
+      .itemImage
+        background-position: center
+        background-size: cover
+        background-repeat: no-repeat
+        height: 100%
+        opacity: 0.55
+        transition: all ease-out 4s
+      .item
+        position: absolute
+        top: 0
+        bottom: 0
+        margin: auto
+        overflow: auto
+        height: 100%
+        display: grid
+        align-content: center
+        padding: 17px 23px
+        h2
+          color: white
+          font-weight: 600
+          font-size: 22px
+          margin: 0
+          width: 90%
+        .blogPostCategory
+          font-size: 11px
+  .pagination-wrapper
+    .pagination
+      display: grid
+      justify-content: space-between
+      grid-auto-flow: column
+      margin: 30px 0 20px
+      .pagGoBack, .pagGoNext
+        font-weight: 700
+        font-size: 14px
+
+@media (min-width: 600px)
+  .postList-wrapper
+    // padding-right: 35px
+    padding-right: 45px
+    padding-left: 30px
+    border-right: solid 1px rgba($bunkerLight, 0.05)
+    margin-bottom: 20px
+    .postList
+      // padding-top: 38px
+      padding-left: 0px
+      padding-right: 0px
+      .postListItem
+        margin-bottom: 30px
+        &:last-child
+          margin-bottom: 16px
+        .itemImg-wrapper
+          height: 150px
+          display: block
+        .itemData-wrapper
+          .itemData
+            h3
+              line-height: 26px
+      .highlightItem
+        height: 290px
+        margin-bottom: 48px
+        .item
+          padding: 17px 26px
+          h2
+            font-size: 24px
+    .pagination-wrapper
+      .pagination
+        margin: 24px -10px 10px
+        .pagGoBack, .pagGoNext
+          // font-weight: 700
+          font-size: 15px
+
+@media (min-width: 992px)
+  .postList-wrapper
+    padding-right: 65px
+    margin-bottom: 25px
+    .postList
+      .postListItem
+        .itemImg-wrapper
+          height: 170px
+        .itemData-wrapper
+          .itemData
+            .blogPostCategory
+              margin-bottom: 6.5px
+            h3
+              font-size: 24px
+              line-height: 30px
+              margin-bottom: 13px
+            p
+              font-size: 15px
+              line-height: 21px
+      .highlightItem
+        // width: 100%
+        height: 340px
+        margin-bottom: 50px
+        .item
+          padding: 17px 30px
+          h2
+            font-size: 27px
+    .pagination-wrapper
+      .pagination
+        margin: 35px -10px 5px
+        .pagGoBack, .pagGoNext
+          // font-weight: 700
+          // font-size: 15px
+
+@media (min-width: 1200px)
+  .postList-wrapper
+    padding-right: 75px
+    margin-bottom: 30px
+    .postList
+      .postListItem
+        margin-bottom: 35px
+        .itemImg-wrapper
+          height: 185px
+        .itemData-wrapper
+          .itemData
+            .blogPostCategory
+              margin-bottom: 8px
+            h3
+              font-size: 25px
+              line-height: 31px
+              margin-bottom: 14px
+            p
+              font-size: 15px
+              line-height: 21px
+      .highlightItem
+        height: 370px
+        .item
+          padding: 17px 38px
+          h2
+            font-size: 30px
+            width: 80%
+    .pagination-wrapper
+      .pagination
+        margin: 42px -10px 10px
+        .pagGoBack, .pagGoNext
+          // font-weight: 700
+          // font-size: 15px
+
+@media (min-width: 1400px)
+  .postList-wrapper
+    padding-right: 70px
+    margin-bottom: 35px
+    .postList
+      .postListItem
+        .itemImg-wrapper
+        .itemData-wrapper
+          .itemData
+            .blogPostCategory
+              // margin-bottom: 8px
+            h3
+              font-size: 25px
+              line-height: 30px
+              margin-bottom: 14px
+            p
+              font-size: 15px
+              line-height: 21px
+      .highlightItem
+        height: 390px
+
+/* Most Visited */
+.mostVisited-wrapper
+  display: none
+  .mostVisited
+    border-top: solid 1px rgba($bunkerLight, 0.05)
+    padding-top: 28px
+    padding-left: 8px
+    padding-right: 8px
+    .title
+      h4
+        font-weight: 700
+        line-height: 21px
+    .mostVisitedItem
+      margin-bottom: 8px
+      .row
+        .itemNumber
+          p
+            margin: 0
+            line-height: 50px
+            color: $orangeYellow
+            margin-top: 20px
+            font-size: 50px
+            font-weight: 700
+            font-style: italic
+        .itemData
+          .blogPostCategory
+            color: $goldenSand
+            font-size: 12px
+          h3
+            font-weight: 700
+            font-size: 18px
+            line-height: 21px
+
+@media (min-width: 600px)
+  .mostVisited-wrapper
+    display: inherit
+    padding-left: 10px
+    .mostVisited
+      border-top: none
+      padding-top: 0
+      padding-left: 0px
+      padding-right: 0px
+
+@media (min-width: 992px)
+  .mostVisited-wrapper
+    padding-left: 25px
+    .mostVisited
+      .title
+        h4
+          font-size: 20px
+          line-height: 24px
+          margin-bottom: 22px
+      .mostVisitedItem
+        .row
+          .itemNumber
+            p
+              font-size: 54px
+              line-height: 54px
+          .itemData
+            h3
+              font-size: 18px
+              line-height: 21px
+
+@media (min-width: 1200px)
+  .mostVisited-wrapper
+    padding-left: 38px
+    .mostVisited
+      .title
+        h4
+          font-size: 21px
+          line-height: 25px
+      .mostVisitedItem
+        margin-bottom: 11px
+        .row
+          .itemNumber
+          .itemData
+            h3
+              width: 90%
+          //     font-size: 18px
+          //     line-height: 22px
+
+@media (min-width: 1400px)
+  .mostVisited-wrapper
+    padding-left: 35px
+    .mostVisited
+      .mostVisitedItem
+        .row
+          .itemData
+            margin-left: -6px
+
+@media (min-width: 1600px)
+  .mostVisited-wrapper
+    .mostVisited
+      .mostVisitedItem
+        .row
+          .itemData
+            margin-left: -10px
+
+/* Footer Blog */
+.blog-footer
+  .footer-brand
+    padding-bottom: 1.5em !important
+  .footer-main
+    .footer-main-contact
+      .footer-rrss-wrapper
+        margin-top: 23px !important
+
+@media (min-width: 600px)
+  .blog-footer
+    .footer-brand
+      // padding-bottom: inherit !important
+      padding-bottom: 3em !important
+
+@media (min-width: 992px)
+  .blog-footer
+    .footer-brand
+      // padding-bottom: inherit !important
+      padding-bottom: 3.5em !important
+
+@media (min-width: 1200px)
+  .blog-footer
+    .footer-main
+      .footer-main-dptos
+      .footer-main-links
+        padding-left: 1em !important
+      .footer-main-contact
+        padding-left: 1em !important
+
+/* Sections */
+/* Section > Header */
+.sectionHeader
+  padding: 3.5em 0 2em
+  margin-bottom: 0.2em
+  .blogPostCategory
+    font-size: 11px
+    margin-bottom: 2px
+    color: $orangeYellow
+  .blogAuthorImg
+    width: 80px
+    margin-bottom: 18px
+    border-radius: 80px
+  h2
+    margin-bottom: 0
+    font-weight: 700
+
+@media (min-width: 600px)
+  .sectionHeader
+    padding: 4.8em 0 2.7em
+    .blogPostCategory
+      font-size: 12px
+      margin-bottom: 2px
+    h2
+      margin-bottom: 0
+      font-weight: 700
+
+@media (min-width: 992px)
+  .sectionHeader
+    padding: 5.3em 0 3em
+    .blogPostCategory
+    h2
+      margin-bottom: 0
+      font-weight: 700
+
+@media (min-width: 1200px)
+  .sectionHeader
+    padding: 6em 0 3.2em
+    .blogPostCategory
+    .blogAuthorImg
+      width: 90px
+      margin-bottom: 18px
+      border-radius: 80px
+    h2
+      margin-bottom: 0
+      font-weight: 700
+
+@media (min-width: 1400px)
+  .sectionHeader
+    padding: 8em 0 3.7em
+    .blogPostCategory
+    .blogAuthorImg
+      width: 100px
+      margin-bottom: 18px
+      border-radius: 100px
+    h2
+      margin-bottom: 0
+      font-weight: 700
+
+/* The Post */
+.thePost-wrapper
+  .thePost
+    .thePost-img
+      width: 100%
+      height: 240px
+      background-position: center
+      background-size: cover
+      background-repeat: no-repeat
+    .thePost-header
+      padding: 3em 1.5em
+      .blogPostCategory
+        font-size: 11px
+        margin-bottom: 16px
+      h1
+        font-weight: 700
+        font-size: 28px
+        margin-bottom: 42px
+      .header-metadata
+        &::before
+          content: ''
+          display: block
+          width: 35px
+          height: 1px
+          bottom: 12px
+          background: rgba($bunkerLight, 0.18)
+          position: relative
+          margin: auto
+        &::after
+          content: ''
+          display: block
+          width: 35px
+          height: 1px
+          top: 12px
+          background: rgba($bunkerLight, 0.18)
+          position: relative
+          margin: auto
+        p
+          font-size: 14px
+          margin-bottom: 0
+    .thePost-content
+      padding: 0 24px
+      margin-bottom: 40px
+    .thePost-sharing
+      margin: 40px 0
+      .blogPostCategory
+        margin-bottom: 12px
+      .postSharing-buttons
+        .sh-icon
+          font-size: 22px
+          margin: 0 9px
+          color: $bunkerLight
+    .thePost-authorBox
+      display: block
+      margin: 0 24px
+      padding: 40px 0
+      box-sizing: border-box
+      border-top: solid 1px rgba($bunkerLight, 0.12)
+      border-bottom: solid 1px rgba($bunkerLight, 0.12)
+      .authorBoxImg
+        vertical-align: top
+        text-align: center
+        img
+          width: 70px
+          border-radius: 100px
+          margin-bottom: 15px
+      .authorBoxData
+        text-align: center
+        .dataName
+          margin-bottom: 16px
+          h4
+            font-size: 1.15em
+            font-weight: 700
+            margin-bottom: -2px
+          p
+            margin: 0
+            font-size: 15px
+            font-weight: 600
+            color: rgba($bunkerLight, 0.7)
+        .dataDescription
+          text-align: left
+          p
+            color: rgba($bunkerLight, 0.9)
+            font-weight: 400
+            font-size: 14px
+            line-height: 19px
+            margin-bottom: 16px
+          .authorRRSS
+            text-align: center
+            a
+              font-size: 20px
+              margin-right: 10px
+              color: rgba($bunkerLight, 0.9)
+    .thePost-related
+      margin: 0 24px
+      padding: 40px 0
+      box-sizing: border-box
+      border-bottom: solid 1px rgba($bunkerLight, 0.12)
+      .title
+        font-weight: 700
+      .relatedItems
+        padding: 0
+        // margin: 0
+        .relatedItem
+          margin-bottom: 4px
+          .blogPostCategory
+            color: $goldenSand
+            font-size: 11px
+            margin-bottom: 3px
+          h3
+            font-weight: 700
+            font-size: 17px
+            line-height: 22px
+            margin-bottom: 12px
+    .thePost-comments
+      margin: 0 24px
+      padding: 40px 0
+      .title
+        h4
+          font-weight: 700
+
+@media (min-width: 600px)
+  .thePost-wrapper
+    .thePost
+      .thePost-img
+        height: 380px
+      .thePost-header
+        padding: 4em
+        .blogPostCategory
+          font-size: 13px
+          margin-bottom: 22px
+        h1
+          font-size: 36px
+          width: 80%
+          margin: auto
+          margin-bottom: 48px
+        .header-metadata
+          &::before
+            width: 35px
+            height: 1px
+            bottom: 14px
+          &::after
+            width: 35px
+            height: 1px
+            top: 14px
+      .thePost-content
+        margin: auto
+        width: 90%
+        margin-bottom: 40px
+      .thePost-sharing
+        margin: 50px 0 45px
+      .thePost-authorBox
+        width: 88%
+        margin: auto
+        padding: 48px 0
+        .authorBoxImg
+          display: inline-block
+          vertical-align: top
+          width: 20%
+          img
+            width: 65%
+            margin-bottom: 0
+        .authorBoxData
+          display: inline-block
+          width: 78%
+          text-align: left
+          .dataName
+            h4
+              font-size: 1.25em
+          .dataDescription
+            p
+              font-size: 15px
+              line-height: 21px
+              margin-bottom: 20px
+            .authorRRSS
+              text-align: left
+              a
+                font-size: 21px
+                margin-right: 14px
+      .thePost-related
+        width: 88%
+        margin: auto
+        padding: 48px 18px
+        .title
+          h4
+            font-size: 19px
+            line-height: 24px
+            margin-bottom: 25px
+        .relatedItems
+          .relatedItem
+            padding-right: 20px
+            margin-bottom: 0
+            h3
+              font-size: 18px
+              line-height: 23px
+              padding-right: 0.5em
+      .thePost-comments
+        margin: auto
+        width: 88%
+        padding: 48px 18px
+
+@media (min-width: 992px)
+  .thePost-wrapper
+    .thePost
+      .thePost-img
+      .thePost-header
+        h1
+          font-size: 40px
+          margin-bottom: 53px
+        .header-metadata
+          &::before
+            width: 35px
+            height: 1px
+            bottom: 18px
+          &::after
+            width: 35px
+            height: 1px
+            top: 18px
+          p
+            font-size: 15px
+      .thePost-content
+        max-width: 830px
+        margin-bottom: 50px
+      .thePost-sharing
+      .thePost-authorBox
+        max-width: 830px
+      .thePost-related
+        max-width: 830px
+        .title
+          h4
+            font-size: 20px
+            line-height: 24px
+            margin-bottom: 30px
+      .thePost-comments
+        max-width: 830px
+
+@media (min-width: 1200px)
+  .thePost-wrapper
+    .thePost
+      .thePost-img
+        height: 450px
+      .thePost-header
+        padding: 5.5em 4em 4.7em
+        h1
+          width: 75%
+          font-size: 44px
+      .thePost-content
+      .thePost-sharing
+        margin: 60px 0 50px
+      .thePost-authorBox
+        padding: 50px 0
+        .authorBoxData
+          .dataName
+            h4
+              font-size: 1.3em
+          .dataDescription
+            p
+              font-size: 16px
+              line-height: 22px
+              margin-bottom: 21.5px
+      .thePost-related
+        padding: 50px 18px
+        .relatedItems
+          .relatedItem
+            h3
+              font-size: 19px
+              line-height: 24px
+              padding-right: 0.7em
+      .thePost-comments
+        padding: 50px 18px
+
+@media (min-width: 1400px)
+  .thePost-wrapper
+    .thePost
+      .thePost-img
+      .thePost-header
+        padding: 6em 0 5em
+        h1
+          width: 60%
+      .thePost-content
+      .thePost-sharing
+      .thePost-authorBox
+        padding: 55px 0
+      .thePost-related
+        padding: 55px 18px
+      .thePost-comments
+        padding: 55px 18px
+
+@media (min-width: 1600px)
+  .thePost-wrapper
+    .thePost
+      .thePost-img
+        height: 530px
+      .thePost-header
+        h1
+          width: 50%
+          font-size: 50px
+      .thePost-content
+      .thePost-sharing
+      .thePost-authorBox
+      .thePost-related
+      .thePost-comments
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//

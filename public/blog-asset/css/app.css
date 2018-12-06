@@ -1,0 +1,245 @@
+.color-bunker {
+  color: #292C31 !important; }
+
+.color-metalicGold {
+  color: #DDAB37 !important; }
+
+a {
+  color: #292C31; }
+  a:hover, a:active, a:focus {
+    color: #292C31;
+    text-decoration: underline; }
+
+body {
+  background: white !important; }
+
+header.appMainHeader {
+  width: 75px;
+  background: rgba(41, 44, 49, 0.02); }
+  header.appMainHeader .page-brand {
+    background: #292C31;
+    color: #F3C967; }
+    header.appMainHeader .page-brand a {
+      color: #F3C967; }
+      header.appMainHeader .page-brand a:hover {
+        text-decoration: none; }
+  header.appMainHeader .header-menu-wrapper .header-menu {
+    margin-top: 14px; }
+
+.appHeaderButton {
+  text-align: center;
+  margin: auto;
+  position: relative;
+  display: block;
+  padding: 8px 0;
+  width: 60px;
+  color: #292C31; }
+  .appHeaderButton:hover, .appHeaderButton:active, .appHeaderButton:focus {
+    color: #DDAB37;
+    text-decoration: none; }
+  .appHeaderButton .appIcon {
+    font-size: 30px; }
+  .appHeaderButton .appNameSection {
+    display: block;
+    font-size: 10px; }
+  .appHeaderButton .appIconOff {
+    position: absolute;
+    bottom: 10px; }
+
+.appHeaderButtonOff {
+  text-align: center;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: absolute;
+  display: block;
+  width: 90%;
+  color: #292C31; }
+  .appHeaderButtonOff:hover, .appHeaderButtonOff:active, .appHeaderButtonOff:focus {
+    color: #DDAB37;
+    text-decoration: none; }
+  .appHeaderButtonOff .appIcon {
+    font-size: 30px; }
+  .appHeaderButtonOff .appNameSection {
+    display: block;
+    font-size: 10px; }
+
+.appHeaderSection {
+  width: 100%;
+  height: 66px;
+  background: rgba(41, 44, 49, 0.1);
+  position: absolute;
+  padding-left: 105px;
+  top: 0;
+  display: grid;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .appHeaderSection h3 {
+    margin: 0; }
+
+.appContent {
+  position: relative;
+  padding: 0 35px 10px 105px;
+  top: 92px; }
+  .appContent .appTableWrapper .tableMenu {
+    margin-bottom: 23px; }
+  .appContent .appTableWrapper .appTable tbody td {
+    padding-right: 20px; }
+  .appContent .appTableWrapper .appTable .iconExternal {
+    font-size: 22px; }
+  .appContent .appTableWrapper .appTable .appTableImg {
+    width: 70px;
+    margin-right: 12px; }
+  .appContent .appAddNew .dropzone {
+    border: 1px dashed rgba(41, 44, 49, 0.5); }
+  .appContent .appAddNew .dropzoneFullHeight {
+    padding: 80px 0 100px; }
+  .appContent .appAddNew p.labelText {
+    margin: 0;
+    margin-bottom: 10px; }
+  .appContent .appAddNew .summernoteForm .note-editable {
+    padding: 20px 20px 10px; }
+  .appContent .appAddNew .summernoteForm .note-fontname {
+    display: none; }
+
+/* Login */
+body.backgroundLogin {
+  height: 100vh !important;
+  width: 100vw !important;
+  background-image: url("../img/login.jpg") !important;
+  background-position: center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important; }
+
+.cover {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.login-content {
+  max-width: 90vw;
+  padding: 0 10px 30px 10px;
+  margin: 100px auto 50px; }
+
+@media (min-width: 768px) {
+  .login-content {
+    max-width: 450px;
+    padding: 0 20px 20px 20px; } }
+
+@media (min-width: 1024px) {
+  .login-content {
+    max-width: 400px; } }
+
+.auth-head-icon {
+  position: relative;
+  height: 60px;
+  width: 60px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  font-size: 30px;
+  background-color: #fff;
+  color: #5c6bc0;
+  -webkit-box-shadow: 0 5px 20px #d6dee4;
+  box-shadow: 0 5px 20px #d6dee4;
+  border-radius: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 2; }
+
+.ibox .ibox-body {
+  padding: 25px 40px 25px; }
+
+.ui-switch span {
+  background-color: #F4FBFF !important;
+  border: 1px solid rgba(44, 94, 211, 0.1) !important; }
+
+.ui-switch input:checked ~ span:after {
+  background-color: rgba(44, 94, 211, 0.95) !important; }
+
+.logo {
+  margin: 20px 0; }
+  .logo .intranetLogo {
+    width: 150px; }
+
+.remember-zone {
+  display: block;
+  margin-top: 1.8em; }
+
+.form-control:focus {
+  border-color: #041F5F !important; }
+
+/* Enlaces */
+a.link-primary {
+  color: #041F5F !important;
+  -webkit-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear; }
+  a.link-primary:hover, a.link-primary:focus {
+    color: #00375E !important; }
+
+/* Tipografia */
+.link-small {
+  font-size: 0.9em;
+  opacity: 0.8; }
+
+.text-remember {
+  margin-left: 10px;
+  color: #292C31; }
+
+/* Header */
+header.header {
+  background-color: #041F5F; }
+  header.header .right-toolbar {
+    padding-right: 15px; }
+
+.btn-primary {
+  color: white;
+  background-color: #2C5ED3;
+  border-color: #2C5ED3; }
+  .btn-primary:focus, .btn-primary.focus, .btn-primary:hover, .btn-primary.active, .btn-primary:active, .btn-primary:disabled, .btn-primary.disabled {
+    color: white;
+    background-color: #2856C0;
+    border-color: #2856C0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none; }
+
+.btn-danger {
+  color: #fff;
+  background-color: #E71D36;
+  border-color: #E71D36; }
+  .btn-danger:focus, .btn-danger.focus, .btn-danger:hover, .btn-danger.active, .btn-danger:active, .btn-danger:disabled, .btn-danger.disabled {
+    color: #fff;
+    background-color: #D21B32;
+    border-color: #D21B32;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none; }
+
+.btn-outline-success {
+  color: #2C5ED3;
+  background-image: none;
+  background-color: transparent;
+  border-color: #2C5ED3; }
+  .btn-outline-success:focus, .btn-outline-success.focus, .btn-outline-success:hover, .btn-outline-success.active, .btn-outline-success:active {
+    color: #fff;
+    background-color: #2C5ED3;
+    border-color: #2C5ED3;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-image: none; }
+
+.form-control {
+  border-color: rgba(41, 44, 49, 0.4); }

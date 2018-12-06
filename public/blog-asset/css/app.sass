@@ -1,0 +1,314 @@
+// Colores
+
+$royalBlue: #041F5F
+$lightRoyalBlue: #052777
+$prusianBlue: #00375E
+$goldenSand: #F3C967
+$metalicGold: #DDAB37
+$aliceBlue: #F4FBFF
+$bunker: #292C31
+$bunkerLight: rgba($bunker, 0.95)
+$warning: #E71D36
+$warningDark: #D21B32
+// Testing Colors
+$ceruleanBlue: #2C5ED3
+$ceruleanBlueDark: #2856C0
+// $blueCrayola: #3571FF
+// $maximumYellowRed: #FFDA35
+// $maximumYellowRedDark: #EABC48
+
+.color-bunker
+  color: $bunker !important
+
+.color-metalicGold
+  color: $metalicGold !important
+
+a
+  color: $bunker
+  &:hover, &:active, &:focus
+    color: $bunker
+    text-decoration: underline
+
+// Body
+
+body
+  background: white !important
+
+//Header
+
+header.appMainHeader
+  width: 75px
+  background: rgba($bunker, 0.02)
+  .page-brand
+    background: $bunker
+    color: $goldenSand
+    a
+      color: $goldenSand
+      &:hover
+        text-decoration: none
+  .header-menu-wrapper
+    .header-menu
+      margin-top: 14px
+
+// Icons
+
+.appHeaderButton
+  text-align: center
+  margin: auto
+  position: relative
+  display: block
+  padding: 8px 0
+  width: 60px
+  color: $bunker
+  &:hover, &:active, &:focus
+    color: $metalicGold
+    text-decoration: none
+  .appIcon
+    font-size: 30px
+  .appNameSection
+    display: block
+    font-size: 10px
+  .appIconOff
+    position: absolute
+    bottom: 10px
+
+.appHeaderButtonOff
+  text-align: center
+  margin: auto
+  left: 0
+  right: 0
+  bottom: 0
+  position: absolute
+  display: block
+  // padding: 8px 0
+  width: 90%
+  color: $bunker
+  &:hover, &:active, &:focus
+    color: $metalicGold
+    text-decoration: none
+  .appIcon
+    font-size: 30px
+  .appNameSection
+    display: block
+    font-size: 10px
+  // .appIconOff
+  //   bottom: 10px
+
+// Header Section
+
+.appHeaderSection
+  width: 100%
+  height: 66px
+  background: rgba($bunkerLight, 0.1)
+  position: absolute
+  padding-left: 105px
+  top: 0
+  display: grid
+  align-items: center
+  h3
+    margin: 0
+
+// Content section
+.appContent
+  position: relative
+  padding: 0 35px 10px 105px
+  top: 92px
+  // top: 73px
+  //Tables
+  .appTableWrapper
+    .tableMenu
+      margin-bottom: 23px
+    .appTable
+      tbody
+        td
+          padding-right: 20px
+      .iconExternal
+        font-size: 22px
+      .appTableImg
+        width: 70px
+        margin-right: 12px
+  .appAddNew
+    .dropzone
+      border: 1px dashed rgba($bunker, 0.5)
+    .dropzoneFullHeight
+      padding: 80px 0 100px
+    p.labelText
+      margin: 0
+      margin-bottom: 10px
+    .summernoteForm
+      .note-editable
+        padding: 20px 20px 10px
+      .note-fontname
+        display: none
+
+// LOGIN & REGISTER
+
+/* Login */
+body.backgroundLogin
+  height: 100vh !important
+  width: 100vw !important
+  background-image: url('../img/login.jpg') !important
+  background-position: center !important
+  background-size: cover !important
+  background-repeat: no-repeat !important
+
+.cover
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  // background-color: rgba(117, 54, 230, .1)
+
+.login-content
+  max-width: 90vw
+  padding: 0 10px 30px 10px
+  margin: 100px auto 50px
+
+@media (min-width: 768px)
+  .login-content
+    max-width: 450px
+    padding: 0 20px 20px 20px
+
+@media (min-width: 1024px)
+  .login-content
+    max-width: 400px
+
+.auth-head-icon
+  position: relative
+  height: 60px
+  width: 60px
+  display: inline-flex
+  align-items: center
+  justify-content: center
+  font-size: 30px
+  background-color: #fff
+  color: #5c6bc0
+  box-shadow: 0 5px 20px #d6dee4
+  border-radius: 50%
+  transform: translateY(-50%)
+  z-index: 2
+
+.ibox
+  .ibox-body
+    padding: 25px 40px 25px
+
+.ui-switch
+  span
+    background-color: $aliceBlue !important
+    border: 1px solid rgba($ceruleanBlue, 0.1) !important
+
+.ui-switch input:checked ~ span:after
+  background-color: rgba($ceruleanBlue, 0.95) !important
+
+.logo
+  margin: 20px 0
+  .intranetLogo
+    width: 150px
+
+.remember-zone
+  display: block
+  margin-top: 1.8em
+
+.form-control
+  &:focus
+    border-color: $royalBlue !important
+
+/* Enlaces */
+a.link-primary
+  color: $royalBlue !important
+  transition: all 0.3s linear
+  &:hover, &:focus
+    color: $prusianBlue!important
+    // opacity: 0.8
+
+/* Tipografia */
+.link-small
+  font-size: 0.9em
+  opacity: 0.8
+
+.text-remember
+  margin-left: 10px
+  color: $bunker
+
+/* Header */
+header.header
+  background-color: $royalBlue
+  // padding: 0 10px
+  .left-toolbar
+  .right-toolbar
+    padding-right: 15px
+
+.btn-primary
+  color: white
+  background-color: $ceruleanBlue
+  border-color: $ceruleanBlue
+  &:focus, &.focus, &:hover, &.active, &:active, &:disabled, &.disabled
+    color: white
+    background-color: $ceruleanBlueDark
+    border-color: $ceruleanBlueDark
+    -webkit-box-shadow: none
+    box-shadow: none
+    background-image: none
+
+// .show > .btn-primary.dropdown-toggle
+//   color: #fff
+//   background-color: #4a5ab9
+//   border-color: #4a5ab9
+//   -webkit-box-shadow: none
+//   box-shadow: none
+//   background-image: none
+
+.btn-danger
+  color: #fff
+  background-color: $warning
+  border-color: $warning
+  &:focus, &.focus, &:hover, &.active, &:active, &:disabled, &.disabled
+    color: #fff
+    background-color: $warningDark
+    border-color: $warningDark
+    -webkit-box-shadow: none
+    box-shadow: none
+    background-image: none
+
+// .show > .btn-danger.dropdown-toggle
+//   color: #fff
+//   background-color: #f64247
+//   border-color: #f64247
+//   -webkit-box-shadow: none
+//   box-shadow: none
+//   background-image: none
+
+.btn-outline-success
+  color: $ceruleanBlue
+  background-image: none
+  background-color: transparent
+  border-color: $ceruleanBlue
+  &:focus, &.focus, &:hover, &.active, &:active
+    color: #fff
+    background-color: $ceruleanBlue
+    border-color: $ceruleanBlue
+    -webkit-box-shadow: none
+    box-shadow: none
+    background-image: none
+
+// .show > .btn-outline-success.dropdown-toggle
+//   color: #fff
+//   background-color: #18C5A9
+//   border-color: #18C5A9
+//   -webkit-box-shadow: none
+//   box-shadow: none
+//   background-image: none
+
+.form-control
+  border-color: rgba($bunker, 0.4)
+
+// .appTable
+//   position: relative
+//
+//
+//
+//
+//
+//
+//
