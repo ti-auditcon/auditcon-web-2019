@@ -11,7 +11,8 @@ $(document).ready(function(){
   $('.menu-toggler').on('click', function(){
 
     // Si el ancho es menos a 768px
-    if ($(window).width() < 992){
+    var width = $(window).width();
+    if (width < 992){
       // Si el contenedor tiene una altura menor a 100px
       // Agranda el alto del mismo contenedor a "X"px
       if ($('.main-header-wrapper').height() < 100){
@@ -21,7 +22,7 @@ $(document).ready(function(){
       // Si no lo achica al tamaño normal
       } else {
         $('.main-header-wrapper').animate({
-          height: "75px"
+          height: "85px"
         }, 600);
       }
     // Si es mayor que 768
@@ -67,7 +68,8 @@ $(document).ready(function(){
   });
 
   //Dropdown
-  if ($(window).width() > 991){
+  var width = $(window).width();
+  if (width > 991){
     $("#dropdown, #dropdownServices").hover(function(){
         $("#dropdownServices").slideDown("1000");
         clearTimeout(debounce);
@@ -85,24 +87,24 @@ $(document).ready(function(){
   }
 
   //Slides index
-  var options = {
-    swipe: false,
-    magneticSwipe: false,
-    transition: "slide",
-    animateDuration: 700,
-    interval: 6000,
-    slideTracker: false,
-    pauseOnHover: true
-  }
-  $(".slider").simpleSlider(options);
-
-  // Obtiene el data-index number y lo cambia
-  $('.present-list-item').click(function(){
-    var dataIndex = $(this).data('index');
-    var slider = $(".slider").data("simpleslider");
-    slider.nextSlide(dataIndex);
-    // alert(dataIndex);
-  });
+  // var options = {
+  //   swipe: false,
+  //   magneticSwipe: false,
+  //   transition: "slide",
+  //   animateDuration: 700,
+  //   interval: 6000,
+  //   slideTracker: false,
+  //   pauseOnHover: true
+  // }
+  // $(".slider").simpleSlider(options);
+  //
+  // // Obtiene el data-index number y lo cambia
+  // $('.present-list-item').click(function(){
+  //   var dataIndex = $(this).data('index');
+  //   var slider = $(".slider").data("simpleslider");
+  //   slider.nextSlide(dataIndex);
+  //   // alert(dataIndex);
+  // });
 
   // B L O G
 
@@ -128,18 +130,15 @@ $(document).ready(function(){
     }
   });
 
-
-  // Hovers
-  // $('.itemData h3').hover(function(){
-  //   $('.itemImg').css({
-  //     "transform": "scale(1.15)"
-  //   });
-  // }, function(){
-  //   $('.itemImg').css({
-  //     "transform": "scale(1)"
-  //   });
-  // });
-
+  // Slider Inicio
+  $('.slider').bxSlider({
+    // mode: 'fade',
+    stopAutoOnClick: true,
+    easing: 'ease-in-out',
+    pager: false,
+    auto: true,
+    pause: 4000,
+  });
 
 });
 //

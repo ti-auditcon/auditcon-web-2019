@@ -12,12 +12,12 @@
         <div class="collapse-menu">
           <nav class="main-menu">
             <ul>
-              <li><a class="h-opacity" href="/">Inicio</a></li>
-              <li id="dropdown"><a class="h-opacity" href="{{url('/servicios')}}">Servicios</a></li>
-              <li><a class="h-opacity" href="{{url('/nosotros')}}">Nosotros</a></li>
-              <li><a class="h-opacity" href="{{url('/contacto')}}">Contacto</a></li>
+              <li><a href="/">Inicio</a></li>
+              <li id="dropdown"><a href="{{url('/servicios')}}">Servicios</a></li>
+              <li><a href="{{url('/nosotros')}}">Nosotros</a></li>
+              <li><a href="{{url('/contacto')}}">Contacto</a></li>
               {{-- <li><a class="h-opacity" href="{{url('/blog')}}">Blog</a></li> --}}
-              <li><a class="h-opacity" href="http://intranet.auditcon.cl">Acceso Clientes</a></li>
+              <li><a href="http://intranet.auditcon.cl">Acceso Clientes</a></li>
             </ul>
           </nav>
           <nav class="language-menu">
@@ -29,10 +29,10 @@
           </nav>
           <nav class="social-button">
             <ul>
-              <a target="_blank"><span class="rrss-icon icon-facebook-square h-opacity"></span></a>
-              <a target="_blank"><span class="rrss-icon icon-twitter h-opacity"></span></a>
-              <a target="_blank"><span class="rrss-icon icon-linkedin-square h-opacity"></span></a>
-              <a target="_blank"><span class="rrss-icon icon-whatsapp h-opacity"></span></a>
+              <a target="_blank"><span class="rrss-icon icon-facebook-square"></span></a>
+              <a target="_blank"><span class="rrss-icon icon-twitter"></span></a>
+              <a target="_blank"><span class="rrss-icon icon-linkedin-square"></span></a>
+              <a target="_blank"><span class="rrss-icon icon-whatsapp"></span></a>
             </ul>
           </nav>
         </div>

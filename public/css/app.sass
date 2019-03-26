@@ -10,6 +10,7 @@
 // Colores
 $royalBlue: #041F5F
 $royalBlueDark: #031A4F
+$royalBlueUltraDark: #021644
 $lightRoyalBlue: #052777
 $prusianBlue: #00375E
 $goldenSand: #F3C967
@@ -17,9 +18,7 @@ $metalicGold: #DDAB37
 $aliceBlue: #F4FBFF
 $bunker: #292C31
 $bunkerDark: #1B1D21
-// $bunkerDark: #222529
 $bunkerLight: #222529
-// $bunkerLight: #292C31
 $onyx: #32363c
 $antiFlashWhite: #F3F3F3
 $orangeYellow: #F9CB61
@@ -43,6 +42,11 @@ $orangeYellow: #F9CB61
   color: $royalBlueDark
 .background-royalBlueDark
   background: $royalBlueDark
+
+.color-royalBlueUltraDark
+  color: $royalBlueUltraDark
+.background-royalBlueUltraDark
+  background: $royalBlueUltraDark
 
 .color-prusianBlue
   color: $prusianBlue
@@ -210,6 +214,9 @@ b, strong
 .w-700
   font-weight: 700
 
+.w-900
+  font-weight: 900
+
 .w-400
   font-weight: 400
 
@@ -315,7 +322,7 @@ h6.subtitle
 @media (min-width: 1400px)
   .back-nosotros
     background-position: center
-    padding: 50px 0
+    padding: 28px 0
 
 .back-call-contacto
   background-image: url('../img/backs/back-call-contacto.jpg')
@@ -436,7 +443,7 @@ a
 @media (min-width: 600px)
   .button
     font-size: 11px
-    padding: 11px 26px
+    padding: 5px 16px
 
 .button-normal
   background: $goldenSand
@@ -444,6 +451,20 @@ a
   transition: all linear .3s
   &:hover
     background: $metalicGold
+
+.button-act
+  padding: 12px 20px
+
+.button-hero
+  padding: 12px 20px
+  -webkit-box-shadow: 0px 8px 40px -10px rgba(0,0,0,0.45)
+  -moz-box-shadow: 0px 8px 40px -10px rgba(0,0,0,0.45)
+  box-shadow: 0px 8px 40px -10px rgba(0,0,0,0.45)
+  transition: all ease 0.3s
+  &:hover
+    -webkit-box-shadow: 0px 8px 40px -10px rgba(0,0,0,0.3)
+    -moz-box-shadow: 0px 8px 40px -10px rgba(0,0,0,0.3)
+    box-shadow: 0px 8px 40px -10px rgba(0,0,0,0.3)
 
 .button-outline
   background: transparent
@@ -463,8 +484,50 @@ a
     color: white
     background: $royalBlue
 
-// Hovers
+.button-arrow
+  display: block
+  text-align: center
+  transition: all ease 0.3s
+  margin-bottom: -22px
+  img
+    width: 20px
+    height: 100%
+    transition: all ease 0.3s
+  p
+    margin-left: 10px !important
+    text-transform: uppercase
+    color: $goldenSand
+    font-weight: 400
+    font-size: 12px
+    letter-spacing: 1.2px
+    transition: all ease 0.3s
+  img, p
+    margin: 0
+    padding: 0
+    vertical-align: middle
+    display: inline-block
+  &:hover
+    img
+      opacity: 0.8
+    p
+      color: $metalicGold
 
+@media (min-width: 600px)
+  .button-arrow
+    p
+      font-size: 13px
+      font-weight: 700
+      letter-spacing: 1.2px
+
+@media (min-width: 900px)
+  .button-arrow
+    margin-top: -3px
+    p
+      font-size: 14px
+      font-weight: 700
+      letter-spacing: 1.5px
+
+// Hovers
 .h-opacity
   opacity: 1
   transition: all linear 0.3s
@@ -474,11 +537,11 @@ a
 // Links
 .link-white
   color: white
-  opacity: 1
+  // opacity: 1
   transition: all linear .3s
   &:hover
-    color: white
-    opacity: 0.7
+    color: $goldenSand
+    // opacity: 0.7
     text-decoration: none
 
 /* ESTRUCTURA */
@@ -496,9 +559,8 @@ header.main-header-wrapper
     @include flex-wrap(wrap)
     @include align-content(center)
     height: 75px
-    // height: 200px
-    padding-left: 1.6em
-    padding-right: 1.6em
+    padding-left: 1.3em
+    padding-right: 1.3em
     .header-brand
       margin-bottom: 1px
       @include align-self(center)
@@ -591,6 +653,10 @@ header.main-header-wrapper
               margin-bottom: 0
             a
               font-weight: 400
+              color: white
+              transition: all ease 0.3s
+              &:hover
+                color: $goldenSand
               // text-transform: uppercase
               // font-size: 0.8em
           // .dropdown
@@ -612,8 +678,12 @@ header.main-header-wrapper
         ul
           a
             margin-right: 0.8em
+            cursor: pointer
             .rrss-icon
               font-size: 1.2em
+              transition: all ease 0.3s
+              &:hover
+                color: $goldenSand
     .dropdown-services
       display: none
 
@@ -705,7 +775,7 @@ header.main-header-wrapper
         h3
           font-size: 120%
           margin-bottom: 34px
-          font-weight: 400
+          font-weight: 600
           position: relative
           left: 58px
           color: white
@@ -767,7 +837,13 @@ header.main-header-wrapper
           width: 142px
       .collapse-menu
         // width: 78% -- (item "blog" agregado)
-        width: 77%
+        width: 78%
+        nav
+          ul
+            a
+              margin-right: 10px
+              // letter-spacing: 0.2px
+              // font-size: 15px
 
 @media (min-width: 1600px)
   header.main-header-wrapper
@@ -804,187 +880,317 @@ header.main-header-wrapper
 .slideUpBlog
  transform: translateY(-550%)
 
-// Present
-.slider-color
-  background: $royalBlue
-
-.slider
-  padding-top: 0 !important
-  width: 100%
-  height: 510px
-  overflow: hidden
-  position: relative
-  .slide
-    width: 100%
+.bx-wrapper
+  height: 380px
+  background: $royalBlueUltraDark !important
+  border: none !important
+  margin-bottom: 0 !important
+  .bx-viewport
     height: 100%
-    top: 0
-    left: 0
-    float: left
-    position: absolute
-    .present-wrapper
-      .present
-        .row
-          min-height: 520px
-          @include align-content(flex-end)
-          .present-headline
-            text-align: center
-            @include align-self(flex-end)
-            h1
-              font-weight: 700
-          .present-list
-            // display: none
-            text-align: center
-            // @include align-self(flex-end)
-            ul
-              list-style: none
-              padding-left: 15px
-              margin: auto
-              li.present-list-item
-                font-size: 0.95em
-                margin-bottom: 4px
-                padding-top: 6px
-                border-bottom: solid 1px rgba(white, 0.12)
-                padding-bottom: 10px
-                // &::before
-                //   font-family: 'icomoon'
-                //   margin-left: -20px
-                //   content: "\e902"
-                //   color: $goldenSand
-                &:last-child
-                  border-bottom: none
-                  padding-bottom: 0
-                a
-                  color: white
-                  font-weight: 300 !important
-                  &:hover
-                    color: white
+    .hero-slider
+      color: $goldenSand
+      height: 100%
+      display: flex
+      justify-content: center
+      align-items: center
+      align-content: center
+      .item
+        z-index: 2
+        color: white
+        height: 100%
+        max-width: 100vw
+        display: flex !important
+        justify-content: center
+        align-items: center
+        .item-data
+          margin: auto
+          max-width: 80%
+          text-align: center
+          h1
+            margin: 0
+            font-weight: 900
+      .item-video
+        z-index: 1
+        video
+          position: absolute
+          min-width: 100%
+          min-height: 100%
+          margin: auto
+          text-align: center
+          overflow: hidden
+          z-index: 2
+        .item-data
+          z-index: 3
+          h1
+  .bx-controls
+    background: transparent !important
+    .bx-controls-direction
+    .bx-pager
+      bottom: 30px !important
 
 @media (min-width: 600px)
-  .slider
-    height: 67vh
-    .slide
-      .present-wrapper
-        .present
-          padding-top: 0
-          padding-bottom: 0.5em
-          .row
-            min-height: 67vh
-            .present-headline
-              @include align-self(flex-end)
-              max-width: 90%
-              margin-left: auto
-              margin-right: auto
-              margin-bottom: 3.8em
-              h1
-                font-size: 2.7em
-                margin-bottom: 0.7em
-            .present-list
-              @include align-self(flex-end)
-              position: relative
-              // bottom: -26px
-              ul
-                margin: auto
-                margin-bottom: 0
-                @include flexbox
-                @include justify-content(center)
-                li.present-list-item
-                  font-size: 1em
-                  width: 45%
-                  padding: 0 2em
-                  border-bottom: none
-                  border-right: solid 1px rgba(white, 0.12)
-                  &:last-child
-                    // padding-top: 8px
-                    position: relative
-                    border-right: none
-                  a
-                    letter-spacing: 0.015em
-
-@media (min-width: 992px)
-  .slider
-    height: 77.2vh
-    .slide
-      .present-wrapper
-        .present
-          padding-bottom: 1em
-          .row
-            min-height: 77.2vh
-            .present-headline
-              max-width: 85%
-              margin-bottom: 4.4em
-              h1
-                font-size: 2.85em
-                margin-bottom: 0.65em
-            .present-list
-              position: relative
-              // bottom: -16px
-              ul
-                margin-bottom: 0
-                margin-top: 0
-                // @include flex-wrap(wrap)
-                li.present-list-item
-                  font-size: 1.05em
-                  padding: 0 3em
-                  width: 40%
-                  a
-                    letter-spacing: 0.01em
-          .present-service
-            padding-bottom: 1.5em
-
-@media (min-width: 1200px)
-  .slider
-    height: 79vh
-    .slide
-      .present-wrapper
-        .present
-          .row
-            min-height: 79vh
-            .present-headline
-              max-width: 80%
-              margin-bottom: 4.6em
-              h1
-                font-size: 3em
-                // margin-bottom: 0.65em
-            .present-list
-              ul
-                li.present-list-item
-                  // font-size: 0.5em
-                  line-height: 1.5em
-                  width: 35%
-                  // font-size: 1.1em
+  .bx-wrapper
+    height: 500px
+    .bx-viewport
+      .hero-slider
+        .item
+          .item-data
+            max-width: 70%
 
 @media (min-width: 1400px)
-  .slider
-    height: 81vh
-    .slide
-      .present-wrapper
-        .present
-          // padding-top: 9.5em
-          .row
-            min-height: 81vh
-            .present-headline
-              margin-bottom: 5em
-              h1
-                font-size: 3.2em
-            .present-list
-              // padding-left: 4em
-              ul
-                li.present-list-item
-                  font-size: 1.1em
+  .bx-wrapper
+    height: 560px
+    .bx-viewport
+      .hero-slider
+        .item
+          .item-data
+            max-width: 50%
+            h1
+              font-size: 3em
 
-@media (min-width: 1600px)
-  .slider
-    height: 84.5vh
-    .slide
-      .present-wrapper
-        .present
-          .row
-            min-height: 84.5vh
-            padding-bottom: 5em
-            .present-headline
-              // margin-bottom:
-              h1
-                font-size: 3.3em
+// .hero-container
+//   display: none
+//   width: 100%
+//   height: 90vh
+//   color: white
+//   position: relative
+//   margin: auto
+//   padding: 0
+//   background-position: center
+//   background-repeat: no-repeat
+//   background-size: cover
+//   overflow: hidden
+//   video
+//     position: absolute
+//     z-index: 2
+//     top: 0
+//     left: 0
+//     right: 0
+//     bottom: 0
+//     min-width: 100%
+//     min-height: 100%
+//     text-align: center
+//     overflow: hidden
+//     margin: auto
+//   .hero
+//     z-index: 3
+//     margin: auto
+//     position: absolute
+//     text-align: center
+//     width: 90%
+//     height: 90%
+//     left: 0
+//     right: 0
+//     top: 0
+//     bottom: 0
+//   .row
+//     display: flex
+//     justify-content: center
+//     align-items: center
+//     align-content: center
+//     height: 100%
+//     h1
+//       margin: 0
+//       font-weight: 900
+//   .mouse
+//     position: absolute
+//
+//
+// @media (min-width: 600px)
+//   .hero-container
+//     height: 500px
+//     .hero
+//       .row
+//         h1
+//
+// @media (min-width: 1400px)
+//   .hero-container
+//     height: 560px
+//     .hero
+//       .row
+//         h1
+
+// Present
+// .slider-color
+//   background: $royalBlue
+//
+// .slider
+//   padding-top: 0 !important
+//   width: 100%
+//   height: 510px
+//   overflow: hidden
+//   position: relative
+//   display: none
+//   .slide
+//     width: 100%
+//     height: 100%
+//     top: 0
+//     left: 0
+//     float: left
+//     position: absolute
+//     .present-wrapper
+//       .present
+//         .row
+//           min-height: 520px
+//           @include align-content(flex-end)
+//           .present-headline
+//             text-align: center
+//             @include align-self(flex-end)
+//             h1
+//               font-weight: 900
+//           .present-list
+//             text-align: center
+//             ul
+//               list-style: none
+//               padding-left: 15px
+//               margin: auto
+//               li.present-list-item
+//                 font-size: 0.95em
+//                 margin-bottom: 4px
+//                 padding-top: 6px
+//                 border-bottom: solid 1px rgba(white, 0.12)
+//                 padding-bottom: 10px
+//                 // &::before
+//                 //   font-family: 'icomoon'
+//                 //   margin-left: -20px
+//                 //   content: "\e902"
+//                 //   color: $goldenSand
+//                 &:last-child
+//                   border-bottom: none
+//                   padding-bottom: 0
+//                 a
+//                   color: white
+//                   font-weight: 400 !important
+//                   &:hover
+//                     color: white
+//
+// @media (min-width: 600px)
+//   .slider
+//     height: 67vh
+//     .slide
+//       .present-wrapper
+//         .present
+//           padding-top: 0
+//           padding-bottom: 0.5em
+//           .row
+//             min-height: 67vh
+//             .present-headline
+//               @include align-self(flex-end)
+//               max-width: 90%
+//               margin-left: auto
+//               margin-right: auto
+//               margin-bottom: 3.8em
+//               h1
+//                 font-size: 2.7em
+//                 // line-height: 2em
+//                 margin-bottom: 0.7em
+//             .present-list
+//               @include align-self(flex-end)
+//               position: relative
+//               // bottom: -26px
+//               ul
+//                 margin: auto
+//                 margin-bottom: 0
+//                 @include flexbox
+//                 @include justify-content(center)
+//                 li.present-list-item
+//                   font-size: 1em
+//                   width: 45%
+//                   padding: 0 2em
+//                   border-bottom: none
+//                   border-right: solid 1px rgba(white, 0.12)
+//                   &:last-child
+//                     // padding-top: 8px
+//                     position: relative
+//                     border-right: none
+//                   a
+//                     letter-spacing: 0.015em
+//
+// @media (min-width: 992px)
+//   .slider
+//     height: 77.2vh
+//     .slide
+//       .present-wrapper
+//         .present
+//           padding-bottom: 1em
+//           .row
+//             min-height: 77.2vh
+//             .present-headline
+//               max-width: 85%
+//               margin-bottom: 4.4em
+//               h1
+//                 font-size: 2.85em
+//                 margin-bottom: 0.4em
+//             .present-list
+//               position: relative
+//               // bottom: -16px
+//               ul
+//                 margin-bottom: 0
+//                 margin-top: 0
+//                 // @include flex-wrap(wrap)
+//                 li.present-list-item
+//                   font-size: 1.05em
+//                   padding: 0 3em
+//                   width: 40%
+//                   a
+//                     letter-spacing: 0.01em
+//           .present-service
+//             padding-bottom: 1.5em
+//
+// @media (min-width: 1200px)
+//   .slider
+//     height: 79vh
+//     .slide
+//       .present-wrapper
+//         .present
+//           .row
+//             min-height: 79vh
+//             .present-headline
+//               max-width: 80%
+//               margin-bottom: 4.6em
+//               h1
+//                 font-size: 3em
+//                 // margin-bottom: 0.65em
+//             .present-list
+//               ul
+//                 li.present-list-item
+//                   // font-size: 0.5em
+//                   line-height: 1.5em
+//                   width: 35%
+//                   // font-size: 1.1em
+//
+// @media (min-width: 1400px)
+//   .slider
+//     height: 81vh
+//     .slide
+//       .present-wrapper
+//         .present
+//           // padding-top: 9.5em
+//           .row
+//             min-height: 81vh
+//             .present-headline
+//               margin-bottom: 5em
+//               h1
+//                 font-size: 3.2em
+//             .present-list
+//               // padding-left: 4em
+//               ul
+//                 li.present-list-item
+//                   font-size: 1.1em
+//
+// @media (min-width: 1600px)
+//   .slider
+//     height: 84vh
+//     .slide
+//       .present-wrapper
+//         .present
+//           .row
+//             min-height: 84.5vh
+//             padding-bottom: 5em
+//             .present-headline
+//               // margin-bottom:
+//               h1
+//                 font-size: 3.3em
 
 //Present Paginas
 .present-service
@@ -999,7 +1205,7 @@ header.main-header-wrapper
     // left: 52px
     // max-width: 90%
     margin-bottom: 0
-    font-weight: 600
+    font-weight: 900
     font-size: 1.7em
     display: block
   [data-icon]:before
@@ -1029,6 +1235,7 @@ header.main-header-wrapper
       // left: 70px
       margin-bottom: 0.3em
       font-size: 2.3em
+      line-height: 1.1em
     [data-icon]:before
       // left: -70px
       font-size: 54px
@@ -1226,6 +1433,69 @@ header.main-header-wrapper
 //         .indicador-ind
 //           font-size: 1.3em
 
+.cta-whatsapp-link
+  .cta-whatsapp-wrapper
+    overflow: hidden
+    padding: 20px 0
+    width: 100%
+    white-space: nowrap
+    background: $goldenSand
+    color: black
+    text-align: center
+    transition: all ease 0.3s
+    .cta-whatsapp
+      text-align: center
+      p
+        margin: 0
+        color: black
+        text-transform: uppercase
+        font-weight: 900
+        letter-spacing: 0.7px
+        letter-spacing: 1px
+        display: block
+        text-align: center
+        font-size: 13px
+        vertical-align: middle
+      img
+        width: 26px
+        margin-bottom: 10px
+        text-align: center
+        margin-right: 12px
+        display: inline-block
+        vertical-align: middle
+  &:hover
+    .cta-whatsapp-wrapper
+      background: $metalicGold
+
+@media (min-width: 600px)
+  .cta-whatsapp-link
+    .cta-whatsapp-wrapper
+      overflow: hidden
+      padding: 20px 0
+      width: 100%
+      white-space: nowrap
+      background: $goldenSand
+      color: black
+      transition: all ease 0.3s
+      .cta-whatsapp
+        text-align: center
+        p
+          margin: 0
+          color: black
+          text-transform: uppercase
+          font-weight: 900
+          letter-spacing: 0.7px
+          letter-spacing: 1px
+          font-size: 15px
+          display: inline-block
+          vertical-align: middle
+        img
+          width: 26px
+          margin-bottom: 0px
+          margin-right: 12px
+          display: inline-block
+          vertical-align: middle
+
 // Experience Display
 .experience-wrapper
   .experience
@@ -1248,12 +1518,52 @@ header.main-header-wrapper
 @media (min-width: 1200px)
   .experience-wrapper
     .experience
-      padding: 2.5em 0 2em
+      padding: 1.5em 0 1em
 
-@media (min-width: 1400px)
-  .experience-wrapper
-    .experience
-      padding: 4.5em 0 4em
+// @media (min-width: 1400px)
+//   .experience-wrapper
+//     .experience
+//       padding: 1.5em 0 1em
+
+.don-wrapper
+  .don
+    .img
+      // width: 100%
+      // height: 300px
+      img
+        width: 90%
+    .data
+      p
+        font-size: 18px
+        line-height: 23px
+        letter-spacing: 0.3px
+
+@media (min-width: 600px)
+  .don-wrapper
+    .don
+      .img
+      .data
+        p
+          // font-size: 18px
+          line-height: 26px
+
+@media (min-width: 900px)
+  .don-wrapper
+    .don
+      .img
+        margin-top: 16px
+      .data
+        margin-top: 16px
+        p
+
+@media (min-width: 1200px)
+  .don-wrapper
+    .don
+      .img
+      .data
+        p
+          // font-size: 18px
+          line-height: 27px
 
 // Servicios Display
 .services-display-wrapper
@@ -1263,37 +1573,66 @@ header.main-header-wrapper
       margin-bottom: 1em
     .services-display-item-wrapper
       margin: auto
+      display: flex
+      justify-content: center
       .services-display-item
-        margin-bottom: 2.3em
+        // margin: auto
+        margin-bottom: 1.35em
+        width: 50%
+        a
+          color: white
+          .services-display-title
+            opacity: 1
+            transition: all ease 0.3s
+            .know-more
+              text-align: center
+              transition: all ease 0.3s
+              img
+                width: 20px
+                height: 100%
+              p
+                margin-left: 10px !important
+                text-transform: uppercase
+                color: $goldenSand
+                font-weight: 400
+                font-size: 12px
+                letter-spacing: 1.2px
+              img, p
+                margin: 0
+                padding: 0
+                vertical-align: middle
+                display: inline-block
+              &:hover
+                opacity: 0.8
         .services-display-title
-          text-align: center
-          min-height: 50px
           h3
-            display: block
-            // left: 55px
-            // position: relative
+            position: relative
             font-weight: 700
-            span
-              font-size: 65%
-              font-weight: 300
-              display: block
-              margin-bottom: -0.03em
-          [data-icon]:before
-            font-family: 'icomoon'
-            font-size: 45px
-            // left: -55px
             display: block
-            // top: 3px
-            margin-bottom: 8px
-            // position: absolute
-            color: $goldenSand
-            content: attr(data-icon)
-            speak: none
-            font-weight: normal
-            font-variant: normal
-            text-transform: none
-            line-height: 1
-            -webkit-font-smoothing: antialiased
+            text-align: center
+            display: block
+            margin-bottom: 10px
+          img
+            width: auto
+            display: block
+            height: 60px
+            text-align: center
+            margin: auto
+            margin-bottom: 6px
+          // [data-icon]:before
+          //   font-family: 'icomoon'
+          //   font-size: 62px
+          //   margin-bottom: 4px
+          //   // position: absolute
+          //   display: block
+          //   color: $goldenSand
+          //   content: attr(data-icon)
+          //   speak: none
+          //   font-weight: normal
+          //   font-variant: normal
+          //   text-transform: none
+          //   line-height: 1
+          //   -webkit-font-smoothing: antialiased
         .services-display-description
           margin-bottom: 25px
           text-align: center
@@ -1307,23 +1646,38 @@ header.main-header-wrapper
   .services-display-wrapper
     .services-display
       padding-top: 0.5em
+      padding-bottom: 0.5em
       h1
         margin-bottom: 1.1em
       .services-display-item-wrapper
+        justify-content: space-between
+        width: 90%
         .services-display-item
-          margin-bottom: 3em
-          padding: 0 2em
-          .services-display-title
-            text-align: left
-            h3
-              // left: 60px
-              margin-bottom: 12px
-              span
-                margin-bottom: 0.07em
-            [data-icon]:before
-              // left: -60px
-              font-size: 48px
-              margin-bottom: 12px
+          // width: 30%
+          width: 190px
+          margin-bottom: 1.2em
+          &:last-child
+            margin-bottom: 0
+          a
+            .services-display-title
+              h3
+                display: inline-block
+                margin-bottom: 6px
+                text-align: left
+                font-size: 21px
+              img
+                display: inline-block
+                vertical-align: top
+                margin: 0
+                margin-right: 14px
+                height: 100%
+                width: 54px
+              .know-more
+                text-align: left
+                padding-left: 70px
+                p
+                  font-size: 11px
+                  letter-spacing: 1.2px
           .services-display-description
             margin-bottom: 30px
             text-align: left
@@ -1337,43 +1691,90 @@ header.main-header-wrapper
       h1
         margin-bottom: 1em
       .services-display-item-wrapper
-        // margin-left: 2em
+        // justify-content: space-evenly
+        justify-content: flex-start
+        // flex-wrap: nowr
+        margin: auto
+        width: 100%
+        padding-left: 5vw
         .services-display-item
-          padding: 0 2em
+          width: 220px
+          // margin-bottom: 0
           .services-display-title
             min-height: 70px
             h3
-              // left: 63px
-              margin-bottom: 16px
+              // margin-bottom: 16px
               span
                 letter-spacing: 0.4px
-            [data-icon]:before
-              margin-bottom: 13px
-              font-size: 52px
+            // [data-icon]:before
+            //   margin-bottom: 13px
+            //   font-size: 52px
 
 @media (min-width: 1200px)
   .services-display-wrapper
     .services-display
       padding-top: 1em
       .services-display-item-wrapper
+        justify-content: flex-start
+        width: 95%
+        // padding-left: 3.7vw
+        padding-left: 5.5vw
         .services-display-item
-          padding: 0 3em 0 2.5em
-          .services-display-title
-            [data-icon]:before
-              font-size: 50px
+          width: 250px
+          a
+            .services-display-title
+              h3
+                font-size: 23px
+            // [data-icon]:before
+            //   font-size: 50px
 
 @media (min-width: 1400px)
   .services-display-wrapper
     .services-display
-      padding-top: 1.5em
+      padding-top: 2em
+      padding-bottom: 0.7em
       .services-display-item-wrapper
-        margin-left: 3.5em
+        width: 100%
+        padding-left: 6vw
+        padding-bottom: 0.8em
         .services-display-item
-          padding: 0 3.5em 0 2em
-          .services-display-title
-            // [data-icon]:before
-            //   font-size: 48px
+          a
+            .services-display-title
+              h3
+                font-size: 24px
 
+@media (min-width: 1550px)
+  .services-display-wrapper
+    .services-display
+      .services-display-item-wrapper
+        max-width: 1280px
+        width: 100%
+        padding-left: 6vw
+        .services-display-item
+          width: 250px
+          .services-display-title
+    // .container
+    //   max-width: 1320px
+
+@media (min-width: 1600px)
+  .services-display-wrapper
+    .services-display
+      .services-display-item-wrapper
+        margin: auto
+        max-width: 1380px
+        width: 100%
+        padding-left: 9.15vw
+        .services-display-item
+          width: 280px
+          .services-display-title
+    .container
+      max-width: 1350px
+
+@media (min-width: 1800px)
+  .services-display-wrapper
+    .services-display
+      .services-display-item-wrapper
+        padding-left: 8.4vw
 // Servicios Section
 // .subservices-wrapper
 //   .subservices
@@ -1623,6 +2024,262 @@ header.main-header-wrapper
   .subservices
     .subservices-item
 
+// Servicio: Explicación
+.explicacion-wrapper
+  .explicacion
+    // margin-top: 0px
+    .img
+      width: 100%
+      height: 200px
+      background: transparent
+      background-position: center
+      background-size: cover
+      margin-bottom: 32px
+    .data
+      padding: 0 10px !important
+      h1
+        margin-bottom: 1.2em
+        // margin-bottom: 4px
+        text-align: center
+        font-size: 23px
+        line-height: 30px
+      p
+        font-size: 18px
+        line-height: 23px
+        letter-spacing: 0.3px
+
+@media (min-width: 600px)
+  .explicacion-wrapper
+    .explicacion
+      padding-top: 90px
+      .img
+        margin-bottom: 30px
+        height: 300px
+      .data
+        // padding: 0 !important
+        padding: 0 20px 0 40px !important
+        h1
+          margin-bottom: 20px
+          font-size: 26px
+          line-height: 36px
+          text-align: left
+        p
+          line-height: 26px
+          // letter-spacing: 0.5px
+
+@media (min-width: 900px)
+  .explicacion-wrapper
+    .explicacion
+      padding-top: 100px
+      padding-left: 40px
+      .img
+        margin-bottom: 0
+      .data
+        h1
+          font-size: 30px
+          line-height: 40px
+        //   margin-bottom: 1em
+        //   text-align: left
+        padding: 0 30px 0 40px !important
+        p
+          // font-size: 18px
+          // line-height: 26px
+          letter-spacing: 0.5px
+
+@media (min-width: 1200px)
+  .explicacion-wrapper
+    .explicacion
+      padding-top: 110px
+      padding-bottom: 90px
+      padding-left: 20px
+      .img
+        height: 340px
+      .data
+        // h1
+        //   margin-bottom: 1em
+        //   text-align: left
+        padding: 0 30px 0 60px !important
+        p
+          // font-size: 20px
+          line-height: 27px
+
+@media (min-width: 1400px)
+  .explicacion-wrapper
+    .explicacion
+      padding-top: 110px
+      padding-bottom: 100px
+      // .data
+      //   h1
+      //     margin-bottom: 1em
+      //     text-align: left
+      //   p
+      //     // font-size: 20px
+      //     line-height: 27px
+
+// Servicio: Proceso
+.proceso-wrapper
+  .proceso
+    h1
+      margin-bottom: 1em
+    .etapas
+      .etapa
+        text-align: center
+        margin: auto
+        width: 100%
+      .flecha
+        transform: rotate(90deg)
+        height: 30px
+        margin: 20px 0 40px
+        img
+          margin: auto
+          height: 30px
+      .contenido
+        img
+          max-width: 100%
+          width: 90px
+          margin-bottom: 10px
+        h5
+          font-size: 22px
+          margin-bottom: 10px
+        p
+          font-size: 18px
+          line-height: 24px
+
+@media (min-width: 600px)
+  .proceso-wrapper
+    .proceso
+      margin-top: 10px
+      h1
+        margin-bottom: 1.1em
+      .etapas
+        display: flex
+        justify-content: space-between
+        flex-wrap: nowrap
+        .etapa
+          width: auto
+        .contenido
+          padding: 0 10px
+          img
+            width: 74px
+        .flecha
+          align-self: center
+          transform: rotate(0)
+
+@media (min-width: 900px)
+  .proceso-wrapper
+    .proceso
+      margin-top: 20px
+      margin-bottom: 20px
+      h1
+        margin-bottom: 1em
+      .etapas
+        // display: flex
+        // justify-content: space-between
+        // flex-wrap: nowrap
+        .etapa
+          // width: auto
+        .contenido
+          padding: 0 15px
+          img
+            // width: 74px
+        .flecha
+          img
+            height: auto
+            width: 42px
+
+@media (min-width: 1200px)
+  .proceso-wrapper
+    .proceso
+      margin-top: 30px
+      margin-bottom: 28px
+      h1
+        margin-bottom: 1.23em
+      .etapas
+        .etapa
+        .contenido
+          padding: 0 15px
+          img
+        .flecha
+          img
+            height: auto
+            width: 42px
+
+@media (min-width: 1400px)
+  .proceso-wrapper
+    .proceso
+      margin-top: 38px
+      margin-bottom: 32px
+      // h1
+      //   margin-bottom: 1.23em
+      // .etapas
+      //   .etapa
+      //   .contenido
+      //     padding: 0 15px
+      //     img
+      //   .flecha
+      //     img
+      //       height: auto
+      //       width: 42px
+
+@media (min-width: 1600px)
+  .proceso-wrapper
+    .proceso
+      margin-top: 38px
+      margin-bottom: 32px
+
+// Servicio: Beneficios
+.beneficios-wrapper
+  .beneficios
+    color: white
+    h1
+      margin-bottom: 1em
+    .items
+      .item
+        display: inline-block
+        width: 100%
+        font-size: 17px
+        margin-bottom: 14px
+        text-align: center
+        &::before
+          content: '✓'
+          display: inline-block
+          margin-right: 8px
+
+@media (min-width: 600px)
+  .beneficios-wrapper
+    .beneficios
+      padding-top: 90px
+      padding-bottom: 80px
+      color: white
+      h1
+        margin-bottom: 1.2em
+      .items
+        display: flex
+        .item
+          padding: 0 12px
+          width: auto
+          width: 33.3%
+          margin-bottom: 22px
+          font-size: 18px
+          // text-align: left
+
+@media (min-width: 900px)
+  .beneficios-wrapper
+    .beneficios
+      padding-top: 95px
+      padding-bottom: 90px
+      // color: white
+      h1
+        margin-bottom: 1.4em
+
+@media (min-width: 1200px)
+  .beneficios-wrapper
+    .beneficios
+      padding-top: 105px
+      padding-bottom: 96px
+      h1
+        margin-bottom: 1.7em
+
 // Blog Display
 .blog-display
   .blog-display-item
@@ -1665,7 +2322,6 @@ header.main-header-wrapper
         .blog-display-img
           height: 190px
 
-// Valores Section
 .values-wrapper
   .values
     .value-item-wrapper
@@ -1742,7 +2398,7 @@ header.main-header-wrapper
         width: 89%
         .campo-item
           padding-left: 3.5vw
-          margin-bottom: 25px
+          // margin-bottom: 25px
           .icon-campo
             font-size: 1.35em
             margin-right: 18px
@@ -1750,7 +2406,7 @@ header.main-header-wrapper
 @media (min-width: 1200px)
   .campos-wrapper
     .campos
-      padding: 20px 0
+      padding: 20px 0 12px
       .campo-items
         width: 100%
         max-width: 1030px
@@ -1786,6 +2442,13 @@ header.main-header-wrapper
       p
         font-size: 1.05em
         line-height: 1.45em
+      .recomendacion-info-header
+        margin-bottom: 8px
+        img
+          width: 100%
+          border-radius: 50px
+        p
+          margin-top: 3px
       .recomendacion-info
         img
           max-width: 100%
@@ -1800,7 +2463,7 @@ header.main-header-wrapper
         padding-left: 35px !important
         padding-right: 35px !important
         .recomendacion-info
-          margin-top: 30px
+          // margin-top: 30px
 
 @media (min-width: 992px)
   .recomendaciones-wrapper
@@ -1821,6 +2484,9 @@ header.main-header-wrapper
   .recomendaciones-wrapper
     .recomendaciones
       .recomendacion
+        .recomendacion-info-header
+          p
+            margin-top: 4px
         .recomendacion-info
           p
             margin-top: 4px
@@ -1862,19 +2528,19 @@ header.main-header-wrapper
       padding: 30px 0 5px
       .partners-header
         h1
-          margin-bottom: 38px
+          margin-bottom: 18px !important
       .partners-items
-        width: 90%
+        width: 85%
         .partner-img
-          margin-top: 95px
-          max-width: 155px
+          margin-top: 65px
+          max-width: 140px
 
 @media (min-width: 1400px)
   .partners-wrapper
     .partners
-      padding: 30px 0 25px
+      padding: 30px 0 1px
       .partners-items
-        width: 100%
+        width: 90%
 
 // Formulario de Contacto
 .contactForm-wrapper
@@ -1885,25 +2551,46 @@ header.main-header-wrapper
       .contactForm-header-schedule
         margin-top: 12px
         margin-bottom: 2px
+    .contactForm-data
+      text-align: center
+      margin: auto
     .contactForm-form
+      margin: auto
       margin-top: 20px
       .form-label
         display: none
+      input::-webkit-input-placeholder
+        color: white
+      input::-moz-placeholder
+        color: white
+      input:-ms-input-placeholder
+        color: white
+      input:-moz-placeholder
+        color: white
+      textarea::-webkit-input-placeholder
+        color: white
+      textarea::-moz-placeholder
+        color: white
+      textarea:-ms-input-placeholder
+        color: white
+      textarea:-moz-placeholder
+        color: white
       input
         margin-bottom: 25px
         @include border-radius(0)
         border: none
-        border-bottom: solid 1px rgba(white, 0.5)
-        padding-left: 2px
-        padding-bottom: 10px
+        border: solid 1px rgba(white, 0.5)
+        // padding-left: 15px
+        // padding-bottom: 10px
+        padding: 8px 15px 10px
         outline: none !important
         outline-width: 0
         transition: all linear 0.3s
-        color: rgba(gray, 0.8)
+        color: white
         &:focus
           outline: $bunker
           background: transparent
-          border-bottom: solid 1px $goldenSand
+          border: solid 1px $goldenSand
           box-shadow: none
           -moz-box-shadow: none
           -webkit-box-shadow: none
@@ -1911,39 +2598,47 @@ header.main-header-wrapper
         margin-bottom: 25px
         @include border-radius(0)
         border: none
-        border-bottom: solid 1px rgba(white, 0.5)
-        padding-left: 0px
-        padding-bottom: 10px
+        border: solid 1px rgba(white, 0.5)
+        padding: 12px
+        height: 43px
         margin-top: 28px
+        vertical-align: middle
         font-size: 1em
-        color: rgba(gray, 0.8)
+        color: white
         transition: all linear 0.3s
+        option
+          color: black
+          &:checked
+            background: $goldenSand
+          &:not(checked)
+            background: $goldenSand
         &:focus
           outline: $bunker
           background: transparent
-          border-bottom: solid 1px $goldenSand
+          border: solid 1px $goldenSand
           box-shadow: none
+          // color: black
           -moz-box-shadow: none
           -webkit-box-shadow: none
         option
           background: transparent
       textarea
-        color: rgba(gray, 0.8)
+        color: white
         @include border-radius(0)
         border: none
-        border-bottom: solid 1px rgba(white, 0.5)
-        padding-left: 2px
-        padding-bottom: 5px
+        border: solid 1px rgba(white, 0.5)
+        padding: 8px 15px 10px
         transition: all linear 0.3s
         &:focus
           outline: $bunker
           background: transparent
-          border-bottom: solid 1px $goldenSand
+          border: solid 1px $goldenSand
           box-shadow: none
           -moz-box-shadow: none
           -webkit-box-shadow: none
       .button-send
-        padding: 9px 14px
+        padding: 6px 16px
+        cursor: pointer
 
 @media screen and (min-width: 600px)
   .contactForm-wrapper
@@ -1958,7 +2653,7 @@ header.main-header-wrapper
       .contactForm-form
         margin-top: 20px
         .button-send
-          padding: 9px 24px
+          padding: 6px 21px
 
 @media (min-width: 992px)
   .contactForm-wrapper
@@ -1973,8 +2668,22 @@ header.main-header-wrapper
         .contactForm-header-desc
           margin: 20px 0 9px
           padding-right: 80px
+      .contactForm-data
+        text-align: left
+        margin-top: 0px
       .contactForm-form
+        border-left: solid 1px rgba(gray, 0.6)
+        padding-left: 6%
         margin-top: 5px
+        select
+          margin-top: 26px
+          padding: 8px 12px
+          // appearance: none
+          // background-image: url('/img/br_down.png')
+          // background-repeat: no-repeat
+          // background-position: 97% 50%
+        textarea
+          padding: 10px 15px
 
 @media (min-width: 1200px)
   .contactForm-wrapper
@@ -1989,8 +2698,13 @@ header.main-header-wrapper
           // margin: 18px 0 35px
         .contactForm-header-desc
           margin: 20px 0 9px
+      .contactForm-data
+        width: 20%
       .contactForm-form
+        width: 80%
         margin-top: 5px
+        // padding-left: 6%
+        // padding-left: 70px
 
 @media (min-width: 1400px)
   .contactForm-wrapper
@@ -2011,14 +2725,28 @@ header.main-header-wrapper
 @media (min-width: 1600px)
   .contactForm-wrapper
     .contactForm
+      max-width: 1200px
       h1
         margin-bottom: 60px
+      .contactForm-data
+        width: 19%
+      .contactForm-form
+        width: 81%
+        padding-left: 7%
 
 // Mapa
 #map
   width: 100%
   height: 400px
   background: $royalBlue
+  .mapouter
+    width: 100%
+    height: 100%
+  .gmap_canvas
+    overflow: hidden
+    background: none !important
+    height: 100%
+    width: 100%
 
 @media (min-width: 600px)
   #map
@@ -2050,7 +2778,7 @@ footer.main-footer
     .footer-main-dptos
       a
         display: block
-        margin-bottom: 0.8em
+        margin-bottom: 0.5em
     .footer-main-links
       nav.links
         a
@@ -2072,6 +2800,10 @@ footer.main-footer
               color: white
               font-size: 20px
               margin-right: 15px
+              cursor: pointer
+              transition: all ease 0.3s
+              &:hover
+                color: $goldenSand
 
 @media (min-width: 600px)
   footer.main-footer
@@ -2089,7 +2821,7 @@ footer.main-footer
       .footer-main-contact
         .contact-info
           p
-            line-height: 1.5em
+            line-height: 1.4em
         .footer-rrss-wrapper
           margin-top: 3em
 
@@ -2105,7 +2837,7 @@ footer.main-footer
       .footer-main-links
         nav.links
           a
-            margin-bottom: 0.3em
+            margin-bottom: 0.2em
       .footer-main-contact
 
 @media (min-width: 1200px)
@@ -2140,6 +2872,12 @@ footer.main-footer
     opacity: 0.6
     font-size: 80%
     letter-spacing: 0.5px
+    a
+      color: rgba(white, 0.6)
+      transition: all ease 0.3s
+      &:hover, &:active
+        // color: $metalicGold
+        color: rgba($goldenSand, 1)
 
 @media (min-width: 992px)
   .footer-credits

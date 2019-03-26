@@ -25,11 +25,12 @@
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
     <link rel="stylesheet" href="{{asset('/css/bootstrap.min.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="{{asset('/icomoon/style.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/animate.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/app.min.css')}}">
     <link rel="stylesheet" href="{{asset('/css/marquee.min.css')}}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="{{asset('/apple-touch-icon-57x57.png')}}" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('/apple-touch-icon-114x114.png')}}" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('/apple-touch-icon-72x72.png')}}" />
@@ -51,6 +52,34 @@
     <meta name="msapplication-wide310x150logo" content="{{asset('/mstile-310x150.png')}}" />
     <meta name="msapplication-square310x310logo" content="{{asset('/mstile-310x310.png')}}" />
     @yield('recaptcha')
+    <!-- Start of Async Drift Code -->
+      <script>
+      "use strict";
+
+      !function() {
+        var t = window.driftt = window.drift = window.driftt || [];
+        if (!t.init) {
+          if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+          t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+          t.factory = function(e) {
+            return function() {
+              var n = Array.prototype.slice.call(arguments);
+              return n.unshift(e), t.push(n), t;
+            };
+          }, t.methods.forEach(function(e) {
+            t[e] = t.factory(e);
+          }), t.load = function(t) {
+            var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+            o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+            var i = document.getElementsByTagName("script")[0];
+            i.parentNode.insertBefore(o, i);
+          };
+        }
+      }();
+      drift.SNIPPET_VERSION = '0.3.1';
+      drift.load('9hrhf4wre79v');
+      </script>
+    <!-- End of Async Drift Code -->
   </head>
   <body>
     @include('layouts.header')
@@ -65,13 +94,14 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <script src="{{asset('/js/bootstrap.bundle.min.js')}}"></script>
 
     <script src="{{asset('/js/headroom.min.js')}}"></script>
     <script src="{{asset('/js/jQuery.headroom.js')}}"></script>
     <script src="{{asset('/js/mindicador.js')}}"></script>
     <script src="{{asset('/js/jquery.simpleslider.min.js')}}"></script>
-    <script src="{{asset('/js/app.js')}}"></script>
+    {{-- <script src="{{asset('/js/app.js')}}"></script> --}}
 
     <script src="{{asset('/js/headroom.min.js')}}" async></script>
     <script src="{{asset('/js/jQuery.headroom.js')}}" defer></script>

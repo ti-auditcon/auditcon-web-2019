@@ -1,4 +1,4 @@
-<footer class="container-fluid background-bunker color-white main-footer">
+<footer class="container-fluid background-bunkerLight color-white main-footer">
       <div class="container footer-brand">
         <div class="row">
           <div class="col-12">
@@ -57,16 +57,16 @@
             </div>
             <nav class="footer-rrss-wrapper">
               <ul class="footer-rrss">
-                <li class="rrss-item h-opacity">
+                <li class="rrss-item">
                   <a target="_blank"><span class="rrss-icon icon-facebook-square"></span></a>
                 </li>
-                <li class="rrss-item h-opacity">
+                <li class="rrss-item">
                   <a target="_blank"><span class="rrss-icon icon-twitter"></span></a>
                 </li>
-                <li class="rrss-item h-opacity">
+                <li class="rrss-item">
                   <a target="_blank"><span class="rrss-icon icon-linkedin-square"></span></a>
                 </li>
-                <li class="rrss-item h-opacity">
+                <li class="rrss-item">
                   <a target="_blank"><span class="rrss-icon icon-whatsapp"></span></a>
                 </li>
               </ul>
@@ -76,9 +76,9 @@
       </div>
     </footer>
 
-    <div class="container-fluid footer-credits color-white background-bunkerLight">
+    <div class="container-fluid footer-credits color-white background-bunkerDark">
       <div class="container p-3 d-flex flex-wrap justify-content-center justify-content-md-between">
         <p class="mb-md-0">℗ 2018. Auditcon™ - Rioseco Auditores</p>
-        <p>Hecho en Curicó, Chile</p>
+        <p>Hecho por <a href="http://asomic.com">asomic</a> en Curicó, Chile</p>
       </div>
     </div>
