@@ -126,6 +126,74 @@ body {
 body.blog {
   font-family: 'Source Sans Pro', sans-serif; }
 
+body.load {
+  overflow: hidden; }
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes appear {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes dissappear {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+@keyframes dissappear {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+
+.loading-box {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #292C31;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 99999 !important;
+  -webkit-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s; }
+  .loading-box .loading-inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center; }
+    .loading-box .loading-inner img {
+      text-align: center;
+      width: 210px; }
+
+.appear {
+  -webkit-animation: appear 0.3s;
+  animation: appear 0.3s; }
+
+.dissappear {
+  -webkit-animation: dissappear 1s forwards;
+  animation: dissappear 1s forwards; }
+
 p {
   margin-bottom: 1.3em; }
 
@@ -535,6 +603,7 @@ header.main-header-wrapper {
       -webkit-align-self: center;
       -moz-align-self: center;
       -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center; }
       header.main-header-wrapper .main-header .header-brand .logo {
         width: 120px; }
@@ -555,6 +624,7 @@ header.main-header-wrapper {
       -webkit-align-self: center;
       -moz-align-self: center;
       -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center; }
       header.main-header-wrapper .main-header .menu-toggler span {
         display: block;
@@ -716,6 +786,7 @@ header.main-header-wrapper {
           -webkit-align-self: center;
           -moz-align-self: center;
           -ms-flex-item-align: center;
+          -ms-grid-row-align: center;
           align-self: center; }
           header.main-header-wrapper .main-header .collapse-menu nav ul li, header.main-header-wrapper .main-header .collapse-menu nav ul a {
             display: inline-block; }
@@ -935,6 +1006,7 @@ header.main-header-wrapper {
   -webkit-align-self: center;
   -moz-align-self: center;
   -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
   align-self: center; }
 
 .present-service h1 {
@@ -1493,7 +1565,9 @@ header.main-header-wrapper {
           font-size: 16.3px;
           line-height: 22.5px; }
       .subservices-wrapper .subservices .subservices-item-wrapper .button-act {
+        -ms-grid-column: 1;
         grid-column-start: 1;
+        -ms-grid-column-span: 3;
         grid-column-end: 4;
         margin-top: 10px;
         margin-bottom: 34px; } }
@@ -1661,6 +1735,7 @@ header.main-header-wrapper {
           width: 74px; }
       .proceso-wrapper .proceso .etapas .flecha {
         -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
         align-self: center;
         -webkit-transform: rotate(0);
         -ms-transform: rotate(0);
@@ -2024,11 +2099,11 @@ header.main-header-wrapper {
     -o-transition: all linear 0.3s;
     transition: all linear 0.3s; }
     .contactForm-wrapper .contactForm .contactForm-form select option {
-      color: black; }
+      color: white; }
       .contactForm-wrapper .contactForm .contactForm-form select option:checked {
-        background: #F3C967; }
+        background: #292C31; }
       .contactForm-wrapper .contactForm .contactForm-form select option:not(checked) {
-        background: #F3C967; }
+        background: #292C31; }
     .contactForm-wrapper .contactForm .contactForm-form select:focus {
       outline: #292C31;
       background: transparent;
@@ -2340,6 +2415,7 @@ body.blog {
       -webkit-align-self: center;
       -moz-align-self: center;
       -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center; }
       .blog-header-wrapper .blog-header .menu-toggler-blog span {
         display: block;
@@ -2403,6 +2479,7 @@ body.blog {
       -webkit-align-self: center;
       -moz-align-self: center;
       -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
       position: absolute;
       left: 0;
@@ -2416,6 +2493,7 @@ body.blog {
       -webkit-align-self: center;
       -moz-align-self: center;
       -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
       align-self: center;
       cursor: pointer; }
       .blog-header-wrapper .blog-header .search-toggler span {
@@ -2555,6 +2633,7 @@ body.blog {
 .blogFeatured {
   background: black;
   position: relative;
+  display: -ms-grid;
   display: grid; }
   .blogFeatured .linkHightlight {
     overflow: hidden; }
@@ -2582,6 +2661,7 @@ body.blog {
     margin: auto;
     overflow: auto;
     height: 100%;
+    display: -ms-grid;
     display: grid;
     -webkit-box-align: center;
     -ms-flex-align: center;
@@ -2658,6 +2738,7 @@ body.blog {
     background: black;
     margin-bottom: 12px;
     height: 230px;
+    display: -ms-grid;
     display: grid;
     overflow: hidden; }
     .highlight-wrapper .highlight .highlightItem:hover .itemImage, .highlight-wrapper .highlight .highlightItem:focus .itemImage {
@@ -2680,6 +2761,7 @@ body.blog {
       margin: auto;
       overflow: auto;
       height: 100%;
+      display: -ms-grid;
       display: grid;
       -ms-flex-line-pack: center;
       align-content: center;
@@ -2932,6 +3014,7 @@ body.blog {
     background: black;
     margin-bottom: 30px;
     height: 270px;
+    display: -ms-grid;
     display: grid;
     overflow: hidden;
     margin-left: -17px;
@@ -2957,6 +3040,7 @@ body.blog {
       margin: auto;
       overflow: auto;
       height: 100%;
+      display: -ms-grid;
       display: grid;
       -ms-flex-line-pack: center;
       align-content: center;
@@ -2971,6 +3055,7 @@ body.blog {
         font-size: 11px; }
 
 .postList-wrapper .pagination-wrapper .pagination {
+  display: -ms-grid;
   display: grid;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;

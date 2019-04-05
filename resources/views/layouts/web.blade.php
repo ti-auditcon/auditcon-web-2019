@@ -82,6 +82,11 @@
     <!-- End of Async Drift Code -->
   </head>
   <body>
+    <div class="loading-box">
+      <div class="loading-inner">
+        <img src="{{asset('/img/logo.svg')}}">
+      </div>
+    </div>
     @include('layouts.header')
 
     @yield('content')

@@ -1,4 +1,16 @@
+
+
 $(document).ready(function(){
+
+
+  setTimeout(function(){
+    $('body').removeClass('load');
+    $('.loading-box').addClass('dissappear');
+  }, 1000);
+
+  setTimeout(function(){
+    $('.loading-box').addClass('d-none');
+  }, 1800);
 
   // Menu toggler click
   $('.menu-toggler').click(

@@ -40,8 +40,8 @@
 
           <div class="etapa contenido">
             <img class="" src="{{ asset('img/how-icons/1.png') }}">
-            <h5 class="w-900 color-royalBlueUltraDark text-center">Nombre etapa</h5>
-            <p class="text-center">Pequeña explicación de una o dos frases.</p>
+            <h5 class="w-900 color-royalBlueUltraDark text-center">Diagnóstico</h5>
+            <p class="text-center">Evaluamos su balance general</p>
           </div>
           <div class="etapa flecha">
             <img src="{{ asset('img/arrow.png') }}">
